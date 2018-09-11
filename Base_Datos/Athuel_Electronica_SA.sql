@@ -16,9 +16,9 @@ tiempoGarantia bigint
 create table proveedor
 (
 cuit bigint primary key not null,
-rasonSocial varchar (50) not null,
-fechaInicioAct datetime,
-tipoProvedor char (1) not null
+razonSocial varchar (50) not null,
+fechaInicioAct date,
+tipoProveedor char (1) not null
 )
 
 
@@ -76,7 +76,7 @@ codProd bigint not null,
 codmarca bigint not null,
 descripcion text,
 modelo varchar (60),
-fechaFabricacion datetime,
+fechaFabricacion date,
 cantidad int,
 
 CONSTRAINT fk_Producto_Codigo_producto FOREIGN KEY (codTipoProd) REFERENCES tipos_productos(codTipoProd),
@@ -132,7 +132,7 @@ orden int not null,
 codTipoProdPar varchar (40) not null,
 codProdPar bigint not null,
 descripcion_paso text,
-fecha datetime not null,
+fecha date not null,
 cantidad int,
 
 CONSTRAINT fk_composicionProducto_producto_parcial FOREIGN KEY (codTipoProdPar,codProdPar) REFERENCES producto(codTipoProd,codProd),
@@ -167,8 +167,8 @@ numeroDocumento bigint not null,
 nombre varchar (50) not null,
 apellido varchar (50) not null,
 calle text not null,
-fechaIngreso datetime not null,
-fechaNacimiento datetime not null,
+fechaIngreso date not null,
+fechaNacimiento date not null,
 codBarrio bigint not null,
 
 CONSTRAINT fk_empleado_codigo_marca FOREIGN KEY (codBarrio) REFERENCES barrio(codBarrio),
@@ -195,7 +195,7 @@ create table empleadoXpuesto
 (
 legajo bigint not null,
 codPuesto bigint not null,
-fechaDesde datetime not null,
+fechaDesde date not null,
 legajoJefe bigint,
 
 CONSTRAINT fk_empleadoXpeusto_legajo FOREIGN KEY (legajo) REFERENCES empleado(legajo),
@@ -209,11 +209,13 @@ ALTER TABLE empleadoXpuesto ADD CONSTRAINT pk_empleadoXpuesto PRIMARY KEY (legaj
 
 
 
+
 create table usuario
 (
 legajo bigint primary key not null,
 nombreUsuario varchar(50) not null,
-contraseña varchar (50) not null,
+contraseña varchar (50) not null
+
 
 CONSTRAINT fk_usuario_legajo FOREIGN KEY (legajo) REFERENCES empleado(legajo)
 )
@@ -237,6 +239,7 @@ ALTER TABLE planificacion ADD CONSTRAINT pk_planificacion PRIMARY KEY (legajo,co
 
 
 
+
 CREATE TABLE formularios
 (
 codFormulario int IDENTITY(1,1) primary key NOT NULL,
@@ -247,25 +250,17 @@ nombreFormulario varchar(50) NOT NULL
 
 
 
-CREATE TABLE perfiles
-(
-codPerfil int IDENTITY(1,1) primary key NOT NULL,
-nombrePerfil varchar(50) NOT NULL
-)
-
-
-
 
 CREATE TABLE permisos
 (
 codFormulario int NOT NULL,
-codPerfil int NOT NULL,
+codPuesto bigint not null,
 
 CONSTRAINT fk_permisos_formulario FOREIGN KEY (codFormulario) REFERENCES formularios (codFormulario),
-CONSTRAINT fk_permisos_perfil FOREIGN KEY (codPerfil) REFERENCES perfiles(codPerfil)
+CONSTRAINT fk_permisos_puestos_trabajo FOREIGN KEY (codPuesto) REFERENCES puestos_trabajo(codPuesto)
 )
 
-ALTER TABLE permisos ADD CONSTRAINT pk_permisos PRIMARY KEY (codFormulario,codPerfil)
+ALTER TABLE permisos ADD CONSTRAINT pk_permisos PRIMARY KEY (codFormulario,codPuesto)
 
 
 
@@ -289,25 +284,24 @@ INSERT tipos_productos (codTipoProd, nombre, descripcion, tiempoGarantia) VALUES
 INSERT tipos_productos (codTipoProd, nombre, descripcion, tiempoGarantia) VALUES ('A013', 'Decodificadores de TV', NULL, 3)
 
 
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30684125792,'Samsung S.A.', 1938-03-01,'E')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30714731382,'Lenovo S.R.L.', 1984-11-01,'E')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30708278552,'Banghó S.A.', 2006-04-03,'N')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30540088213,'Garbarino S.A.', 1951-01-01,'N')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30503612891,'BGH S.A.', 1913-01-01,'N')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30642617555,'Newsan S.A.', 1991-09-18,'E')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30679928879,'Sony S.A.', 1946-05-07,'E')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30714809373,'HP S.R.L.', 1939-04-07,'E')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30525649691,'Kodak S.A.',1889-03-17,'E')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30711247986,'Motorola S.A.', 1928-09-25,'E')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30522041153,'Alcatel S.A.', 2004-08-12,'E')
-INSERT proveedor (cuit, rasonSocial, fechaInicioAct, tipoProvedor) VALUES (30685889397,'DirecTV S.A.', 1990-02-20,'E')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30684125792,'Samsung S.A.', '1938-03-01','E')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30714731382,'Lenovo S.R.L.', '1984-11-01','E')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30708278552,'Banghó S.A.', '2006-04-03','N')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30540088213,'Garbarino S.A.', '1951-01-01','N')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30503612891,'BGH S.A.', '1913-01-01','N')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30642617555,'Newsan S.A.', '1991-09-18','E')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30679928879,'Sony S.A.', '1946-05-07','E')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30714809373,'HP S.R.L.', '1939-04-07','E')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30525649691,'Kodak S.A.','1889-03-17','E')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30711247986,'Motorola S.A.', '1928-09-25','E')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30522041153,'Alcatel S.A.', '2004-08-12','E')
+INSERT proveedor (cuit, razonSocial, fechaInicioAct, tipoProveedor) VALUES (30685889397,'DirecTV S.A.', '1990-02-20','E')
 
 
 INSERT ciudad (nombre) VALUES ('Ushuaia')
 INSERT ciudad (nombre) VALUES ('Río Grande')
 INSERT ciudad (nombre) VALUES ('Tolhuin')
 INSERT ciudad (nombre) VALUES ('San Sebastian')
-
 
 
 INSERT marca (nombre) VALUES ('Samsung')
@@ -348,10 +342,14 @@ INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (5, 'Fabricante',
 INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (6, 'Encargado de Stock', NULL)
 INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (7, 'Acomodadores', NULL)
 INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (8, 'Guardia', NULL)
+INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (9, 'Administrador de base de datos', NULL)
+INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (10, 'Administración', NULL)
+INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (11, 'Ayudante', NULL)
 
 
 INSERT turnos_trabajo (codTurno, horarioInicio, horarioFin) VALUES (1, '06:00:00', '14:00:00')
 INSERT turnos_trabajo (codTurno, horarioInicio, horarioFin) VALUES (2, '14:00:00', '22:00:00')
+
 
 INSERT barrio(nombre, codCiudad) VALUES ('Río Pipo', 1)
 INSERT barrio(nombre, codCiudad) VALUES ('Bella Vista', 1)
@@ -363,3 +361,21 @@ INSERT barrio(nombre, codCiudad) VALUES ('Don Bosco', 2)
 INSERT barrio(nombre, codCiudad) VALUES ('15 de Octubre', 2)
 INSERT barrio(nombre, codCiudad) VALUES ('Alem', 2)
 INSERT barrio(nombre, codCiudad) VALUES ('Almafuerte', 2)
+
+
+INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, fechaIngreso, fechaNacimiento, codBarrio) VALUES (1, 21705129, 'Raul', 'Martinez', 'Juan Facundo Quiroga 251', '2000-04-26', '1977-08-20', 2)
+INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, fechaIngreso, fechaNacimiento, codBarrio) VALUES (1, 29146375, 'Walter Tobias', 'Hahn', 'Av Maipú 1215', '2011-01-30', '1985-03-23', 4)
+INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, fechaIngreso, fechaNacimiento, codBarrio) VALUES (1, 34129127, 'Pamela', 'Gomez', 'Kawi 50', '2013-12-10', '1991-11-15', 9)
+INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, fechaIngreso, fechaNacimiento, codBarrio) VALUES (1, 32864761, 'María Eugenia', 'Vázquez', 'Prefectura Naval al 702', '2009-07-03', '1989-05-02', 7)
+
+
+INSERT empleadoXpuesto (legajo, codPuesto, fechaDesde,legajoJefe) VALUES (1, 2, '2015-06-12', NULL)
+INSERT empleadoXpuesto (legajo, codPuesto, fechaDesde,legajoJefe) VALUES (2, 9, '2013-12-10', NULL)
+INSERT empleadoXpuesto (legajo, codPuesto, fechaDesde,legajoJefe) VALUES (3, 1, '2013-12-10', 1)
+INSERT empleadoXpuesto (legajo, codPuesto, fechaDesde,legajoJefe) VALUES (4, 10, '2011-08-27', NULL)
+
+
+INSERT usuario (legajo, nombreUsuario, contraseña) VALUES (1, 'Raul2000', 'facundo251')
+INSERT usuario (legajo, nombreUsuario, contraseña) VALUES (2, 'TobiasWHahn', '03231215')
+INSERT usuario (legajo, nombreUsuario, contraseña) VALUES (3, 'PamelaG', 'Gomez1991')
+INSERT usuario (legajo, nombreUsuario, contraseña) VALUES (4, 'MEVazquez', '4761z2')

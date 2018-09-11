@@ -22,26 +22,30 @@ Partial Class alta_puesto_trabajo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txt_nombre = New System.Windows.Forms.TextBox()
+        Me.txt_descripcion = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txt_codigo = New System.Windows.Forms.TextBox()
+        Me.cancelar = New System.Windows.Forms.Button()
+        Me.guardar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txt_nombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(97, 44)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txt_nombre.Location = New System.Drawing.Point(238, 44)
+        Me.txt_nombre.Name = "txt_nombre"
+        Me.txt_nombre.Size = New System.Drawing.Size(100, 20)
+        Me.txt_nombre.TabIndex = 0
         '
-        'TextBox2
+        'txt_descripcion
         '
-        Me.TextBox2.Location = New System.Drawing.Point(97, 73)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(269, 41)
-        Me.TextBox2.TabIndex = 1
+        Me.txt_descripcion.Location = New System.Drawing.Point(238, 73)
+        Me.txt_descripcion.Multiline = True
+        Me.txt_descripcion.Name = "txt_descripcion"
+        Me.txt_descripcion.Size = New System.Drawing.Size(269, 41)
+        Me.txt_descripcion.TabIndex = 1
         '
         'Label1
         '
@@ -61,15 +65,53 @@ Partial Class alta_puesto_trabajo
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Descripción"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(22, 18)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "codigo"
+        '
+        'txt_codigo
+        '
+        Me.txt_codigo.Location = New System.Drawing.Point(238, 18)
+        Me.txt_codigo.Name = "txt_codigo"
+        Me.txt_codigo.Size = New System.Drawing.Size(100, 20)
+        Me.txt_codigo.TabIndex = 4
+        '
+        'cancelar
+        '
+        Me.cancelar.Location = New System.Drawing.Point(387, 147)
+        Me.cancelar.Name = "cancelar"
+        Me.cancelar.Size = New System.Drawing.Size(119, 29)
+        Me.cancelar.TabIndex = 6
+        Me.cancelar.Text = "Cancelar"
+        Me.cancelar.UseVisualStyleBackColor = True
+        '
+        'guardar
+        '
+        Me.guardar.Location = New System.Drawing.Point(228, 147)
+        Me.guardar.Name = "guardar"
+        Me.guardar.Size = New System.Drawing.Size(119, 29)
+        Me.guardar.TabIndex = 7
+        Me.guardar.Text = "Guardar"
+        Me.guardar.UseVisualStyleBackColor = True
+        '
         'alta_puesto_trabajo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(552, 165)
+        Me.ClientSize = New System.Drawing.Size(552, 198)
+        Me.Controls.Add(Me.guardar)
+        Me.Controls.Add(Me.cancelar)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txt_codigo)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txt_descripcion)
+        Me.Controls.Add(Me.txt_nombre)
         Me.Name = "alta_puesto_trabajo"
         Me.Text = "alta_puesto_trabajo"
         Me.ResumeLayout(False)
@@ -77,8 +119,12 @@ Partial Class alta_puesto_trabajo
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txt_nombre As TextBox
+    Friend WithEvents txt_descripcion As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txt_codigo As TextBox
+    Friend WithEvents cancelar As Button
+    Friend WithEvents guardar As Button
 End Class

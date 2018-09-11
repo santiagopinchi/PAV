@@ -72,6 +72,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\conexion_BD.vb" />
+    <Compile Include="Clases\proveedores.vb" />
+    <Compile Include="Clases\puesto_trabajo.vb" />
+    <Compile Include="Clases\tratamientos_especiales.vb" />
+    <Compile Include="Clases\usuario.vb" />
     <Compile Include="Formularios\alta_barrio.Designer.vb">
       <DependentUpon>alta_barrio.vb</DependentUpon>
     </Compile>
@@ -126,6 +131,18 @@
     <Compile Include="Formularios\alta_usuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\borrar_proveedor.Designer.vb">
+      <DependentUpon>borrar_proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\borrar_proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Borrar_puesto_trabajo.Designer.vb">
+      <DependentUpon>Borrar_puesto_trabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Borrar_puesto_trabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
     </Compile>
@@ -138,11 +155,59 @@
     <Compile Include="Formularios\login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\menu_empleado.Designer.vb">
+      <DependentUpon>menu_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\menu_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\menu_estadisticas.Designer.vb">
+      <DependentUpon>menu_estadisticas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\menu_estadisticas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Menu_principal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Menu_principal.Designer.vb">
       <DependentUpon>Menu_principal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\menu_producto.Designer.vb">
+      <DependentUpon>menu_producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\menu_producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\menu_proveedores.Designer.vb">
+      <DependentUpon>menu_proveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\menu_proveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\menu_puesto.Designer.vb">
+      <DependentUpon>menu_puesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\menu_puesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\menu_turno.Designer.vb">
+      <DependentUpon>menu_turno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\menu_turno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\modificar_proveedor.Designer.vb">
+      <DependentUpon>modificar_proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\modificar_proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\modificar_puesto_trabajo.Designer.vb">
+      <DependentUpon>modificar_puesto_trabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\modificar_puesto_trabajo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -189,14 +254,44 @@
     <EmbeddedResource Include="Formularios\alta_usuario.resx">
       <DependentUpon>alta_usuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\borrar_proveedor.resx">
+      <DependentUpon>borrar_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Borrar_puesto_trabajo.resx">
+      <DependentUpon>Borrar_puesto_trabajo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\menu_empleado.resx">
+      <DependentUpon>menu_empleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\menu_estadisticas.resx">
+      <DependentUpon>menu_estadisticas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Menu_principal.resx">
       <DependentUpon>Menu_principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\menu_producto.resx">
+      <DependentUpon>menu_producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\menu_proveedores.resx">
+      <DependentUpon>menu_proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\menu_puesto.resx">
+      <DependentUpon>menu_puesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\menu_turno.resx">
+      <DependentUpon>menu_turno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\modificar_proveedor.resx">
+      <DependentUpon>modificar_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\modificar_puesto_trabajo.resx">
+      <DependentUpon>modificar_puesto_trabajo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -216,6 +311,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_cerrar_sesion %28copia%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_cerrar_sesion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

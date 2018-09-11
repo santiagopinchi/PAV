@@ -29,8 +29,8 @@ Partial Class login
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_usuario = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_password = New System.Windows.Forms.MaskedTextBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -43,7 +43,7 @@ Partial Class login
         Me.Button3.Location = New System.Drawing.Point(385, 185)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(56, 55)
-        Me.Button3.TabIndex = 22
+        Me.Button3.TabIndex = 3
         Me.Button3.UseVisualStyleBackColor = False
         '
         'PictureBox3
@@ -65,7 +65,7 @@ Partial Class login
         Me.Button1.Location = New System.Drawing.Point(276, 185)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(56, 55)
-        Me.Button1.TabIndex = 17
+        Me.Button1.TabIndex = 2
         Me.Button1.UseVisualStyleBackColor = False
         '
         'PictureBox1
@@ -102,22 +102,22 @@ Partial Class login
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Usuario"
         '
-        'MaskedTextBox1
+        'txt_usuario
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(246, 62)
-        Me.MaskedTextBox1.Mask = "CCCCCCCCCCCCCCCCCCCC"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(147, 20)
-        Me.MaskedTextBox1.TabIndex = 23
+        Me.txt_usuario.Location = New System.Drawing.Point(246, 62)
+        Me.txt_usuario.Mask = "CCCCCCCCCCCCCCCCCCCC"
+        Me.txt_usuario.Name = "txt_usuario"
+        Me.txt_usuario.Size = New System.Drawing.Size(147, 20)
+        Me.txt_usuario.TabIndex = 0
         '
-        'MaskedTextBox2
+        'txt_password
         '
-        Me.MaskedTextBox2.Location = New System.Drawing.Point(246, 121)
-        Me.MaskedTextBox2.Mask = "CCCCCCCC"
-        Me.MaskedTextBox2.Name = "MaskedTextBox2"
-        Me.MaskedTextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.MaskedTextBox2.Size = New System.Drawing.Size(147, 20)
-        Me.MaskedTextBox2.TabIndex = 24
+        Me.txt_password.Location = New System.Drawing.Point(246, 121)
+        Me.txt_password.Mask = "CCCCCCCCCCCC"
+        Me.txt_password.Name = "txt_password"
+        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txt_password.Size = New System.Drawing.Size(147, 20)
+        Me.txt_password.TabIndex = 1
         '
         'login
         '
@@ -126,8 +126,8 @@ Partial Class login
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(509, 252)
-        Me.Controls.Add(Me.MaskedTextBox2)
-        Me.Controls.Add(Me.MaskedTextBox1)
+        Me.Controls.Add(Me.txt_password)
+        Me.Controls.Add(Me.txt_usuario)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Button1)
@@ -153,6 +153,6 @@ Partial Class login
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
-    Friend WithEvents MaskedTextBox2 As MaskedTextBox
+    Friend WithEvents txt_usuario As MaskedTextBox
+    Friend WithEvents txt_password As MaskedTextBox
 End Class

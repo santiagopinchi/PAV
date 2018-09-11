@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class alta_proveedor
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,22 +20,24 @@ Partial Class alta_proveedor
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_cuit = New System.Windows.Forms.TextBox()
+        Me.txt_razon_social = New System.Windows.Forms.TextBox()
+        Me.txt_fecha_inicio = New System.Windows.Forms.MaskedTextBox()
+        Me.button_confirmar = New System.Windows.Forms.Button()
+        Me.button_cancelar = New System.Windows.Forms.Button()
+        Me.txt_tipo_proveedor = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 26)
+        Me.Label1.Location = New System.Drawing.Point(16, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(35, 13)
         Me.Label1.TabIndex = 0
@@ -64,49 +66,70 @@ Partial Class alta_proveedor
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(16, 116)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(80, 13)
+        Me.Label4.Size = New System.Drawing.Size(109, 13)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Tipo Proveedor"
+        Me.Label4.Text = "Tipo Proveedor (N/E)"
         '
-        'TextBox1
+        'txt_cuit
         '
-        Me.TextBox1.Location = New System.Drawing.Point(64, 26)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 4
+        Me.txt_cuit.Location = New System.Drawing.Point(131, 23)
+        Me.txt_cuit.Name = "txt_cuit"
+        Me.txt_cuit.Size = New System.Drawing.Size(100, 20)
+        Me.txt_cuit.TabIndex = 0
         '
-        'TextBox2
+        'txt_razon_social
         '
-        Me.TextBox2.Location = New System.Drawing.Point(99, 56)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 5
+        Me.txt_razon_social.Location = New System.Drawing.Point(131, 53)
+        Me.txt_razon_social.Name = "txt_razon_social"
+        Me.txt_razon_social.Size = New System.Drawing.Size(100, 20)
+        Me.txt_razon_social.TabIndex = 1
         '
-        'TextBox3
+        'txt_fecha_inicio
         '
-        Me.TextBox3.Location = New System.Drawing.Point(114, 116)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 6
+        Me.txt_fecha_inicio.Location = New System.Drawing.Point(131, 83)
+        Me.txt_fecha_inicio.Mask = "00/00/0000"
+        Me.txt_fecha_inicio.Name = "txt_fecha_inicio"
+        Me.txt_fecha_inicio.Size = New System.Drawing.Size(100, 20)
+        Me.txt_fecha_inicio.TabIndex = 2
+        Me.txt_fecha_inicio.ValidatingType = GetType(Date)
         '
-        'MaskedTextBox1
+        'button_confirmar
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(114, 83)
-        Me.MaskedTextBox1.Mask = "00/00/0000"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.MaskedTextBox1.TabIndex = 7
-        Me.MaskedTextBox1.ValidatingType = GetType(Date)
+        Me.button_confirmar.Location = New System.Drawing.Point(30, 182)
+        Me.button_confirmar.Name = "button_confirmar"
+        Me.button_confirmar.Size = New System.Drawing.Size(75, 23)
+        Me.button_confirmar.TabIndex = 4
+        Me.button_confirmar.Text = "Confirmar"
+        Me.button_confirmar.UseVisualStyleBackColor = True
+        '
+        'button_cancelar
+        '
+        Me.button_cancelar.Location = New System.Drawing.Point(156, 182)
+        Me.button_cancelar.Name = "button_cancelar"
+        Me.button_cancelar.Size = New System.Drawing.Size(75, 23)
+        Me.button_cancelar.TabIndex = 5
+        Me.button_cancelar.Text = "Cancelar"
+        Me.button_cancelar.UseVisualStyleBackColor = True
+        '
+        'txt_tipo_proveedor
+        '
+        Me.txt_tipo_proveedor.Location = New System.Drawing.Point(131, 113)
+        Me.txt_tipo_proveedor.Mask = "L"
+        Me.txt_tipo_proveedor.Name = "txt_tipo_proveedor"
+        Me.txt_tipo_proveedor.Size = New System.Drawing.Size(15, 20)
+        Me.txt_tipo_proveedor.TabIndex = 3
         '
         'alta_proveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(423, 176)
-        Me.Controls.Add(Me.MaskedTextBox1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(257, 241)
+        Me.Controls.Add(Me.txt_tipo_proveedor)
+        Me.Controls.Add(Me.button_cancelar)
+        Me.Controls.Add(Me.button_confirmar)
+        Me.Controls.Add(Me.txt_fecha_inicio)
+        Me.Controls.Add(Me.txt_razon_social)
+        Me.Controls.Add(Me.txt_cuit)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -122,8 +145,10 @@ Partial Class alta_proveedor
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents txt_cuit As TextBox
+    Friend WithEvents txt_razon_social As TextBox
+    Friend WithEvents txt_fecha_inicio As MaskedTextBox
+    Friend WithEvents button_confirmar As Button
+    Friend WithEvents button_cancelar As Button
+    Friend WithEvents txt_tipo_proveedor As MaskedTextBox
 End Class
