@@ -48,9 +48,7 @@
         End If
         Return "CORRECTO"
     End Function
-
-
-    Public Sub buscar_proveedor(ByVal cuit As Long)
+Public Sub buscar_proveedor(ByVal cuit As Long)
         Dim tabla As New DataTable
         Dim sql As String = ""
         sql = "SELECT * "
