@@ -338,6 +338,8 @@ INSERT tipo_documento (nombre) VALUES ('Libretas de Enrolamiento')
 INSERT tipo_documento (nombre) VALUES ('Libretas Cívicas')
 
 
+
+
 INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (1, 'Operario linea de Ensamblaje', NULL)
 INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (2, 'Gerente de piso', NULL)
 INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (3, 'Gerente de Linea', NULL)
