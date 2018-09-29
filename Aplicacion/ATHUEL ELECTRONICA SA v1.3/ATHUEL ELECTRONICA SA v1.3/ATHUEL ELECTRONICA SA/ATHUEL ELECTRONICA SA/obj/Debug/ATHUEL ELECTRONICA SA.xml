@@ -22,6 +22,11 @@ ATHUEL ELECTRONICA SA
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:ATHUEL_ELECTRONICA_SA.My.Resources.Resources._fondo_sistema">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ATHUEL_ELECTRONICA_SA.My.Resources.Resources.ico_cerrar_sesion">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

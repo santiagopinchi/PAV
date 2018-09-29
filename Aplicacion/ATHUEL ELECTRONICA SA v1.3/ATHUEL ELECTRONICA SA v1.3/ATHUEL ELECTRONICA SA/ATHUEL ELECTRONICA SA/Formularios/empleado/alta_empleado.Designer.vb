@@ -77,7 +77,7 @@ Partial Class alta_empleado
         Me.GroupBox1.Location = New System.Drawing.Point(18, 81)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(483, 130)
-        Me.GroupBox1.TabIndex = 3
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Personales"
         '
@@ -95,7 +95,7 @@ Partial Class alta_empleado
         '
         Me.cmb_fecha_nac.Checked = False
         Me.cmb_fecha_nac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.cmb_fecha_nac.Location = New System.Drawing.Point(256, 47)
+        Me.cmb_fecha_nac.Location = New System.Drawing.Point(257, 48)
         Me.cmb_fecha_nac.Name = "cmb_fecha_nac"
         Me.cmb_fecha_nac.Size = New System.Drawing.Size(87, 20)
         Me.cmb_fecha_nac.TabIndex = 2
@@ -196,7 +196,7 @@ Partial Class alta_empleado
         Me.GroupBox2.Location = New System.Drawing.Point(18, 215)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(483, 164)
-        Me.GroupBox2.TabIndex = 73
+        Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de Contacto"
         '
@@ -205,7 +205,7 @@ Partial Class alta_empleado
         Me.Button1.Location = New System.Drawing.Point(305, 87)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(156, 23)
-        Me.Button1.TabIndex = 78
+        Me.Button1.TabIndex = 6
         Me.Button1.Text = "Agregar teléfono"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -216,14 +216,14 @@ Partial Class alta_empleado
         Me.cmb_barrio.Location = New System.Drawing.Point(305, 57)
         Me.cmb_barrio.Name = "cmb_barrio"
         Me.cmb_barrio.Size = New System.Drawing.Size(156, 21)
-        Me.cmb_barrio.TabIndex = 77
+        Me.cmb_barrio.TabIndex = 4
         '
         'txt_email
         '
         Me.txt_email.Location = New System.Drawing.Point(70, 122)
         Me.txt_email.Name = "txt_email"
         Me.txt_email.Size = New System.Drawing.Size(392, 20)
-        Me.txt_email.TabIndex = 13
+        Me.txt_email.TabIndex = 7
         '
         'cmb_ciudad
         '
@@ -232,21 +232,21 @@ Partial Class alta_empleado
         Me.cmb_ciudad.Location = New System.Drawing.Point(70, 88)
         Me.cmb_ciudad.Name = "cmb_ciudad"
         Me.cmb_ciudad.Size = New System.Drawing.Size(156, 21)
-        Me.cmb_ciudad.TabIndex = 10
+        Me.cmb_ciudad.TabIndex = 5
         '
         'txt_dpto
         '
         Me.txt_dpto.Location = New System.Drawing.Point(187, 57)
         Me.txt_dpto.Name = "txt_dpto"
         Me.txt_dpto.Size = New System.Drawing.Size(50, 20)
-        Me.txt_dpto.TabIndex = 8
+        Me.txt_dpto.TabIndex = 3
         '
         'txt_nro_piso
         '
         Me.txt_nro_piso.Location = New System.Drawing.Point(70, 56)
         Me.txt_nro_piso.Name = "txt_nro_piso"
         Me.txt_nro_piso.Size = New System.Drawing.Size(51, 20)
-        Me.txt_nro_piso.TabIndex = 7
+        Me.txt_nro_piso.TabIndex = 2
         '
         'Label16
         '
@@ -262,14 +262,14 @@ Partial Class alta_empleado
         Me.txt_nro_calle.Location = New System.Drawing.Point(389, 25)
         Me.txt_nro_calle.Name = "txt_nro_calle"
         Me.txt_nro_calle.Size = New System.Drawing.Size(73, 20)
-        Me.txt_nro_calle.TabIndex = 6
+        Me.txt_nro_calle.TabIndex = 1
         '
         'txt_calle
         '
         Me.txt_calle.Location = New System.Drawing.Point(70, 25)
         Me.txt_calle.Name = "txt_calle"
         Me.txt_calle.Size = New System.Drawing.Size(263, 20)
-        Me.txt_calle.TabIndex = 5
+        Me.txt_calle.TabIndex = 0
         '
         'Label15
         '
@@ -357,7 +357,7 @@ Partial Class alta_empleado
         Me.txt_legajo.Location = New System.Drawing.Point(66, 46)
         Me.txt_legajo.Name = "txt_legajo"
         Me.txt_legajo.Size = New System.Drawing.Size(118, 20)
-        Me.txt_legajo.TabIndex = 76
+        Me.txt_legajo.TabIndex = 0
         '
         'Label17
         '
@@ -377,7 +377,7 @@ Partial Class alta_empleado
         Me.btn_cancelar.Location = New System.Drawing.Point(293, 436)
         Me.btn_cancelar.Name = "btn_cancelar"
         Me.btn_cancelar.Size = New System.Drawing.Size(62, 63)
-        Me.btn_cancelar.TabIndex = 79
+        Me.btn_cancelar.TabIndex = 4
         Me.btn_cancelar.UseVisualStyleBackColor = True
         '
         'btn_agregar
@@ -388,7 +388,7 @@ Partial Class alta_empleado
         Me.btn_agregar.Location = New System.Drawing.Point(182, 436)
         Me.btn_agregar.Name = "btn_agregar"
         Me.btn_agregar.Size = New System.Drawing.Size(62, 63)
-        Me.btn_agregar.TabIndex = 78
+        Me.btn_agregar.TabIndex = 3
         Me.btn_agregar.UseVisualStyleBackColor = False
         '
         'alta_empleado

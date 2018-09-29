@@ -6,6 +6,10 @@
     Public Property nombre As String
     Public Property apellido As String
     Public Property calle As String
+    Public Property nroCalle As Integer
+    Public Property piso As Integer
+    Public Property dpto As String
+    Public Property email As String
     Public Property fecha_ingreso As Date
     Public Property fecha_nac As Date
     Public Property id_barrio As Integer
@@ -14,7 +18,7 @@
         Dim sql As String = ""
         sql = "INSERT INTO empleado ("
         sql &= "legajo, codTipodoc, numeroDocumento, nombre, apellido"
-        sql &= ", calle, fechaIngreso, fechaNacimiento, codBarrio)"
+        sql &= ", calle, nroCalle, piso, dpto, email, fechaIngreso, fechaNacimiento, codBarrio)"
         sql &= "VALUES ("
         sql &= _legajo
         sql &= ", " & _tipo_documento
@@ -22,6 +26,10 @@
         sql &= ",'" & _nombre & "'"
         sql &= ",'" & _apellido & "'"
         sql &= ",'" & _calle & "'"
+        sql &= "," & _nroCalle
+        sql &= "," & _piso
+        sql &= ",'" & _dpto & "'"
+        sql &= ",'" & _email & "'"
         sql &= "," & _fecha_ingreso
         sql &= "," & _fecha_nac
         sql &= "," & _id_barrio & ")"
@@ -36,6 +44,10 @@
         sql &= ", nombre = '" & Me._nombre & "'"
         sql &= ", apellido = '" & Me._apellido & "'"
         sql &= ", calle = '" & Me._calle & "'"
+        sql &= ", nroCalle = " & Me._nroCalle
+        sql &= ", piso = " & Me._piso
+        sql &= ", dpto = '" & Me._dpto & "'"
+        sql &= ", email = '" & Me._email & "'"
         sql &= ", fechaIngreso = " & Me._fecha_ingreso
         sql &= ", fechaNacimiento = " & Me._fecha_nac
         sql &= ", codBarrio = " & Me._id_barrio & ")"
@@ -51,10 +63,10 @@
 
     End Sub
     Public Function validar() As String
-        If Me._legajo = 0 Then
+        If Me._legajo = "" Then
             Return "El legajo está vacío"
         End If
-        If Me._tipo_documento = 0 Then
+        If Me._tipo_documento = "" Then
             Return "El tipo de documento está vacío"
         End If
         If Me._nro_documento = "" Then
@@ -68,6 +80,9 @@
         End If
         If Me._calle = "" Then
             Return "La calle está vacía"
+        End If
+        If Me._nroCalle = "" Then
+            Return "El número de calle está vacía"
         End If
         If Me._fecha_ingreso = " / /" Then
             Return "La fecha de ingreso está vacía"
@@ -103,18 +118,26 @@
         _nombre = tabla.Rows(0)("nombre")
         _apellido = tabla.Rows(0)("apellido")
         _calle = tabla.Rows(0)("calle")
+        _nroCalle = tabla.Rows(0)("nroCalle")
+        _piso = tabla.Rows(0)("piso")
+        _dpto = tabla.Rows(0)("dpto")
+        _email = tabla.Rows(0)("email")
         _fecha_ingreso = tabla.Rows(0)("Legajo")
         _fecha_nac = tabla.Rows(0)("Legajo")
         _id_barrio = tabla.Rows(0)("Legajo")
     End Sub
 
     Private Sub blanquear()
-        _legajo = 0
+        _legajo = ""
         _tipo_documento = ""
-        _nro_documento = 0
+        _nro_documento = ""
         _nombre = ""
         _apellido = ""
         _calle = ""
+        _nroCalle = ""
+        _piso = ""
+        _dpto = ""
+        _email = ""
         _fecha_ingreso = ""
         _fecha_nac = ""
         _id_barrio = 0
