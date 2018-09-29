@@ -21,7 +21,7 @@
     End Sub
 
     Private Sub transferir_datos_empleado()
-        Me._empleado.legajo = Me.txt_legajo.Text
+        'Me._empleado.legajo = Me.txt_legajo.Text
         Me._empleado.nombre = Me.txt_nombre.Text
         Me._empleado.apellido = Me.txt_apellido.Text
         Me._empleado.id_barrio = Me.cmb_barrio.SelectedValue

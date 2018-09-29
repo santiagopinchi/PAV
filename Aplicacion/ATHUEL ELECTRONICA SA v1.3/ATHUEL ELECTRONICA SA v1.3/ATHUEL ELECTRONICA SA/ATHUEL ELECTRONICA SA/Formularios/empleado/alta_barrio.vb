@@ -14,9 +14,10 @@
 
     End Sub
     Private Sub alta_barrio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cmb_ciudad.DataSource = _BD.leo_tabla("SELECT * FROM ciudad")
-        cmb_ciudad.DisplayMember = "nombre"
-        cmb_ciudad.ValueMember = "codCiudad"
+        _BD.llenar_combo(cmb_ciudad, _BD.leo_tabla("SELECT * FROM ciudad"), "nombre", "codCiudad")
+        'cmb_ciudad.DataSource = _BD.leo_tabla("SELECT * FROM ciudad")
+        'cmb_ciudad.DisplayMember = "nombre"
+        'cmb_ciudad.ValueMember = "codCiudad"
         blanquear()
         cargar_grilla()
     End Sub

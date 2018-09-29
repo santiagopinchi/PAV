@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub transferir_datos_empleado()
-        Me._empleado.legajo = Integer.Parse(Me.txt_legajo.Text)
+        'Me._empleado.legajo = Integer.Parse(Me.txt_legajo.Text)
         Me._empleado.nombre = Me.txt_nombre.Text
         Me._empleado.apellido = Me.txt_apellido.Text
         Me._empleado.id_barrio = Me.cmb_barrio.SelectedValue
@@ -24,7 +24,7 @@
     End Sub
 
     Private Sub blanquear()
-        Me.txt_legajo.Text = ""
+        'Me.txt_legajo.Text = ""
         Me.txt_nombre.Text = ""
         Me.txt_apellido.Text = ""
         Me.cmb_barrio.SelectedIndex = -1
@@ -42,28 +42,44 @@
 
     Private Sub btn_agregar_Click(sender As Object, e As EventArgs) Handles btn_agregar.Click
         transferir_datos_empleado()
-        Dim mensaje As String = Me._empleado.validar()
-        If mensaje <> "CORRECTO" Then
-            MsgBox(mensaje, MsgBoxStyle.Critical, "Error")
-        Else
-            Me._empleado.insertar()
-            Me.blanquear()
-        End If
+        'Dim mensaje As String = Me._empleado.validar()
+        'If mensaje <> "Validación correcta" Then
+        '    MsgBox(mensaje, MsgBoxStyle.Critical, "Error")
+        'Else
+        '    Me._empleado.insertar()
+        '    MsgBox("Se grabó con éxito el empleado")
+        '    Me.blanquear()
+        'End If
+
+        Me._empleado.insertar()
+        MsgBox("Se grabó con éxito el empleado")
+        Me.blanquear()
+
+    End Sub
+
+    Private Sub llenar_combo(ByVal cmb As ComboBox, ByVal source As Object, ByVal display As String, ByRef value As String)
+        cmb.DataSource = source
+        cmb.DisplayMember = display
+        cmb.ValueMember = value
+        cmb.SelectedIndex = -1
     End Sub
 
     Private Sub alta_empleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cmb_tipo_doc.DataSource = _BD.leo_tabla("SELECT * FROM tipo_documento")
-        cmb_tipo_doc.DisplayMember = "nombre"
-        cmb_tipo_doc.ValueMember = "codTipoDoc"
+        llenar_combo(cmb_tipo_doc, _BD.leo_tabla("SELECT * FROM tipo_documento"), "nombre", "codTipoDoc")
+        'cmb_tipo_doc.DataSource = _BD.leo_tabla("SELECT * FROM tipo_documento")
+        'cmb_tipo_doc.DisplayMember = "nombre"
+        'cmb_tipo_doc.ValueMember = "codTipoDoc"
 
-        cmb_barrio.DataSource = _BD.leo_tabla("SELECT * FROM barrio")
-        cmb_barrio.DisplayMember = "nombre"
-        cmb_barrio.ValueMember = "codBarrio"
+        llenar_combo(cmb_barrio, _BD.leo_tabla("SELECT * FROM barrio"), "nombre", "codBarrio")
+        'cmb_barrio.DataSource = _BD.leo_tabla("SELECT * FROM barrio")
+        'cmb_barrio.DisplayMember = "nombre"
+        'cmb_barrio.ValueMember = "codBarrio"
 
+        llenar_combo(cmb_ciudad, _BD.leo_tabla("SELECT * FROM ciudad"), "nombre", "codCiudad")
         'cmb_ciudad.DataSource = ("SELECT * FROM ciudad")
         'cmb_ciudad.DisplayMember = "nombre"
         'cmb_ciudad.ValueMember = "codCiudad"
-
+        Me.txt_legajo.Enabled = False
         blanquear()
     End Sub
 End Class

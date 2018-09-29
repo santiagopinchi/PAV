@@ -1,6 +1,6 @@
 ﻿Public Class empleado
     Dim _BD As New CONEXION_BD
-    Public Property legajo As Integer
+    'Public Property legajo As Integer
     Public Property tipo_documento As Integer
     Public Property nro_documento As Integer
     Public Property nombre As String
@@ -17,11 +17,11 @@
     Public Sub insertar()
         Dim sql As String = ""
         sql = "INSERT INTO empleado ("
-        sql &= "legajo, codTipodoc, numeroDocumento, nombre, apellido"
+        sql &= " codTipodoc, numeroDocumento, nombre, apellido"
         sql &= ", calle, nroCalle, piso, dpto, email, fechaIngreso, fechaNacimiento, codBarrio)"
         sql &= "VALUES ("
-        sql &= _legajo
-        sql &= ", " & _tipo_documento
+        'sql &= _legajo
+        sql &= _tipo_documento
         sql &= ", " & _nro_documento
         sql &= ",'" & _nombre & "'"
         sql &= ",'" & _apellido & "'"
@@ -37,9 +37,9 @@
     End Sub
     Public Sub modificar()
         Dim sql As String = ""
-        sql &= "UPDATE empleado "
-        sql &= "SET legajo = " & Me._legajo
-        sql &= ", codTipoDoc = " & Me._tipo_documento
+        sql &= "UPDATE empleado SET "
+        'sql &= "SET legajo = " & Me._legajo
+        sql &= " codTipoDoc = " & Me._tipo_documento
         sql &= ", numeroDocumento = " & Me._nro_documento
         sql &= ", nombre = '" & Me._nombre & "'"
         sql &= ", apellido = '" & Me._apellido & "'"
@@ -63,9 +63,10 @@
 
     End Sub
     Public Function validar() As String
-        If Me._legajo = "" Then
-            Return "El legajo está vacío"
-        End If
+        'If Me._legajo = "" Then
+        '    Return "El legajo está vacío"
+        'End If
+
         If Me._tipo_documento = "" Then
             Return "El tipo de documento está vacío"
         End If
@@ -106,13 +107,13 @@
 
         If tabla.Rows.Count = 0 Then
             MsgBox("No se ha encontrado al empleado")
-            Me.blanquear()
+            'Me.blanquear()
         Else
             Me.transferir(tabla)
         End If
     End Sub
     Private Sub transferir(ByVal tabla As DataTable)
-        _legajo = tabla.Rows(0)("legajo")
+        '_legajo = tabla.Rows(0)("legajo")
         _tipo_documento = tabla.Rows(0)("tipoDocumento")
         _nro_documento = tabla.Rows(0)("numeroDocumento")
         _nombre = tabla.Rows(0)("nombre")
@@ -127,19 +128,19 @@
         _id_barrio = tabla.Rows(0)("Legajo")
     End Sub
 
-    Private Sub blanquear()
-        _legajo = ""
-        _tipo_documento = ""
-        _nro_documento = ""
-        _nombre = ""
-        _apellido = ""
-        _calle = ""
-        _nroCalle = ""
-        _piso = ""
-        _dpto = ""
-        _email = ""
-        _fecha_ingreso = ""
-        _fecha_nac = ""
-        _id_barrio = 0
-    End Sub
+    'Private Sub blanquear()
+    '    '_legajo = ""
+    '    _tipo_documento = ""
+    '    _nro_documento = ""
+    '    _nombre = ""
+    '    _apellido = ""
+    '    _calle = ""
+    '    _nroCalle = ""
+    '    _piso = ""
+    '    _dpto = ""
+    '    _email = ""
+    '    _fecha_ingreso = ""
+    '    _fecha_nac = ""
+    '    _id_barrio = 0
+    'End Sub
 End Class

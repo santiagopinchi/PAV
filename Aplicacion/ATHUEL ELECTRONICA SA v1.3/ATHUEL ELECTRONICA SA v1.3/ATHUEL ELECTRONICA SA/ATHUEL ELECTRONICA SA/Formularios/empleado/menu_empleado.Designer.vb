@@ -32,10 +32,11 @@ Partial Class menu_empleado
         '
         'atras
         '
-        Me.atras.Image = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Sin_título
-        Me.atras.Location = New System.Drawing.Point(29, 182)
+        Me.atras.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Fleche_Gauche
+        Me.atras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.atras.Location = New System.Drawing.Point(128, 165)
         Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(143, 44)
+        Me.atras.Size = New System.Drawing.Size(74, 74)
         Me.atras.TabIndex = 0
         Me.atras.UseVisualStyleBackColor = True
         '

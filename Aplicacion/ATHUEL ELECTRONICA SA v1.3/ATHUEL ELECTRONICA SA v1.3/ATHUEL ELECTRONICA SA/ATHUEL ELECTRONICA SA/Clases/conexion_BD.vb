@@ -27,4 +27,11 @@
         cerrar()
         Return tabla
     End Function
+
+    Public Sub llenar_combo(ByVal cmb As ComboBox, ByVal source As Object, ByVal display As String, ByRef value As String)
+        cmb.DataSource = source
+        cmb.DisplayMember = display
+        cmb.ValueMember = value
+        cmb.SelectedIndex = -1
+    End Sub
 End Class
