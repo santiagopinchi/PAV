@@ -14,4 +14,11 @@
         Me.dgv_01.DataSource = _BD.leo_tabla("SELECT * FROM empleado")
     End Sub
 
+    Private Sub btn_cancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
+        Me.Close()
+    End Sub
+
+    Private Sub borrar_empleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.cargar_grilla()
+    End Sub
 End Class

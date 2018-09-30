@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ATHUEL ELECTRONICA SA
+</name>
+</assembly>
+<members>
+<member name="T:ATHUEL_ELECTRONICA_SA.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:ATHUEL_ELECTRONICA_SA.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:ATHUEL_ELECTRONICA_SA.My.Resources.Resources._fondo_sistema">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Arreter">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Fleche_Gauche">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ATHUEL_ELECTRONICA_SA.My.Resources.Resources.ico_cerrar_sesion">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ATHUEL_ELECTRONICA_SA.My.Resources.Resources.ico_cerrar_sesion__copia_">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Sin_título">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:ATHUEL_ELECTRONICA_SA.DataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+</members>
+</doc>

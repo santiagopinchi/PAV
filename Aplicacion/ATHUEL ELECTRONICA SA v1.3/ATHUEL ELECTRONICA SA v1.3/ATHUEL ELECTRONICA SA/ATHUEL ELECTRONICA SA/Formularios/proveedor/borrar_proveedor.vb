@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub btn_borrar_Click(sender As Object, e As EventArgs) Handles btn_borrar.Click
-        Dim cuit As Integer
+        Dim cuit As Long
         cuit = Me.dgv_vista.CurrentRow.Cells(0).Value
         Me._proveedor.borrar(cuit)
         Me.cargar_grilla()

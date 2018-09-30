@@ -26,12 +26,12 @@ Partial Class alta_proveedor
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txt_cuit = New System.Windows.Forms.TextBox()
         Me.txt_razon_social = New System.Windows.Forms.TextBox()
         Me.txt_fecha_inicio = New System.Windows.Forms.MaskedTextBox()
         Me.button_confirmar = New System.Windows.Forms.Button()
         Me.button_cancelar = New System.Windows.Forms.Button()
         Me.txt_tipo_proveedor = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_cuit = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -73,13 +73,6 @@ Partial Class alta_proveedor
         Me.Label4.Size = New System.Drawing.Size(109, 13)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Tipo Proveedor (N/E)"
-        '
-        'txt_cuit
-        '
-        Me.txt_cuit.Location = New System.Drawing.Point(131, 23)
-        Me.txt_cuit.Name = "txt_cuit"
-        Me.txt_cuit.Size = New System.Drawing.Size(100, 20)
-        Me.txt_cuit.TabIndex = 0
         '
         'txt_razon_social
         '
@@ -123,6 +116,14 @@ Partial Class alta_proveedor
         Me.txt_tipo_proveedor.Size = New System.Drawing.Size(15, 20)
         Me.txt_tipo_proveedor.TabIndex = 3
         '
+        'txt_cuit
+        '
+        Me.txt_cuit.Location = New System.Drawing.Point(131, 23)
+        Me.txt_cuit.Mask = "99999999999"
+        Me.txt_cuit.Name = "txt_cuit"
+        Me.txt_cuit.Size = New System.Drawing.Size(100, 20)
+        Me.txt_cuit.TabIndex = 6
+        '
         'alta_proveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -130,12 +131,12 @@ Partial Class alta_proveedor
         Me.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources._fondo_sistema
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(257, 241)
+        Me.Controls.Add(Me.txt_cuit)
         Me.Controls.Add(Me.txt_tipo_proveedor)
         Me.Controls.Add(Me.button_cancelar)
         Me.Controls.Add(Me.button_confirmar)
         Me.Controls.Add(Me.txt_fecha_inicio)
         Me.Controls.Add(Me.txt_razon_social)
-        Me.Controls.Add(Me.txt_cuit)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -153,10 +154,10 @@ Partial Class alta_proveedor
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txt_cuit As TextBox
     Friend WithEvents txt_razon_social As TextBox
     Friend WithEvents txt_fecha_inicio As MaskedTextBox
     Friend WithEvents button_confirmar As Button
     Friend WithEvents button_cancelar As Button
     Friend WithEvents txt_tipo_proveedor As MaskedTextBox
+    Friend WithEvents txt_cuit As MaskedTextBox
 End Class

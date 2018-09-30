@@ -14,7 +14,7 @@
         Me._empleado.id_barrio = Me.cmb_barrio.SelectedValue
         Me._empleado.calle = Me.txt_calle.Text
         Me._empleado.nroCalle = Integer.Parse(Me.txt_nro_calle.Text)
-        Me._empleado.piso = Integer.Parse(Me.txt_nro_piso.Text)
+        Me.txt_nro_piso.Text = Me.txt_nro_piso.Text
         Me._empleado.dpto = Me.txt_dpto.Text
         Me._empleado.email = Me.txt_email.Text
         Me._empleado.nro_documento = Integer.Parse(Me.txt_nro_doc.Text)

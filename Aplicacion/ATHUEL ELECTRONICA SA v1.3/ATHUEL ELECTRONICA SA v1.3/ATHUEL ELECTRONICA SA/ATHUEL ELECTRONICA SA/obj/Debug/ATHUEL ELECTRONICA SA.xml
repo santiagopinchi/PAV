@@ -52,5 +52,10 @@ ATHUEL ELECTRONICA SA
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:ATHUEL_ELECTRONICA_SA.DataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
 </members>
 </doc>

@@ -16,11 +16,10 @@
 
     Public Sub modificar()
         Dim sql As String = ""
-        sql &= "UPDATE barrio"
-        sql &= "SET nombre ='" & Me._nombre & "'"
-        sql &= " codCiudad =" & Me._codCiudad
-        sql &= "WHERE codBarrio = " & Me._codigo
-
+        sql &= "UPDATE barrio "
+        sql &= "SET nombre = '" & Me._nombre & "'"
+        sql &= ", codCiudad = " & Me._codCiudad
+        sql &= " WHERE codBarrio = " & Me._codigo
         Me._BD.INS_MOD_BOR(sql)
     End Sub
 

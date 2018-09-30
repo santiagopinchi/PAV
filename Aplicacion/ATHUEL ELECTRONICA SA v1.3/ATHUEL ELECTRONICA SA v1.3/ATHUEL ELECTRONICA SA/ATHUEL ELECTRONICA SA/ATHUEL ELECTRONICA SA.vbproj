@@ -85,16 +85,27 @@
     <Compile Include="Clases\tratamientos_especiales.vb" />
     <Compile Include="Clases\turnos_trabajo.vb" />
     <Compile Include="Clases\usuario.vb" />
-    <Compile Include="Formularios\empleado\alta_barrio.Designer.vb">
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\alta_barrio.Designer.vb">
       <DependentUpon>alta_barrio.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\empleado\alta_barrio.vb">
+    <Compile Include="Formularios\empleado\ciudad\barrio\alta_barrio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\empleado\alta_ciudad.Designer.vb">
+    <Compile Include="Formularios\empleado\ciudad\barrio\modificar_barrio.Designer.vb">
+      <DependentUpon>modificar_barrio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\modificar_barrio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\alta_ciudad.Designer.vb">
       <DependentUpon>alta_ciudad.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\empleado\alta_ciudad.vb">
+    <Compile Include="Formularios\empleado\ciudad\alta_ciudad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\alta_contacto.Designer.vb">
@@ -115,10 +126,28 @@
     <Compile Include="Formularios\alta_producto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\borrar_barrio.Designer.vb">
+      <DependentUpon>borrar_barrio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\borrar_barrio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\borrar_ciudad.Designer.vb">
+      <DependentUpon>borrar_ciudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\borrar_ciudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\empleado\borrar_empleado.Designer.vb">
       <DependentUpon>borrar_empleado.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\empleado\borrar_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\modificar_ciudad.Designer.vb">
+      <DependentUpon>modificar_ciudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\modificar_ciudad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\empleado\modificar_empleado.Designer.vb">
@@ -139,16 +168,16 @@
     <Compile Include="Formularios\puestos_trabajo\alta_puesto_trabajo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\alta_turno.Designer.vb">
+    <Compile Include="Formularios\turnos\alta_turno.Designer.vb">
       <DependentUpon>alta_turno.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\alta_turno.vb">
+    <Compile Include="Formularios\turnos\alta_turno.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\alta_usuario.Designer.vb">
+    <Compile Include="Formularios\empleado\usuario\alta_usuario.Designer.vb">
       <DependentUpon>alta_usuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\alta_usuario.vb">
+    <Compile Include="Formularios\empleado\usuario\alta_usuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\proveedor\borrar_proveedor.Designer.vb">
@@ -169,10 +198,10 @@
     <Compile Include="Formularios\Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\login.Designer.vb">
+    <Compile Include="Formularios\empleado\usuario\login.Designer.vb">
       <DependentUpon>login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\login.vb">
+    <Compile Include="Formularios\empleado\usuario\login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\empleado\menu_empleado.Designer.vb">
@@ -212,10 +241,16 @@
     <Compile Include="Formularios\puestos_trabajo\menu_puesto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\menu_turno.Designer.vb">
+    <Compile Include="Formularios\turnos\borrar_turno.Designer.vb">
+      <DependentUpon>borrar_turno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\turnos\borrar_turno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\turnos\menu_turno.Designer.vb">
       <DependentUpon>menu_turno.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\menu_turno.vb">
+    <Compile Include="Formularios\turnos\menu_turno.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\proveedor\modificar_proveedor.Designer.vb">
@@ -228,6 +263,12 @@
       <DependentUpon>modificar_puesto_trabajo.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\puestos_trabajo\modificar_puesto_trabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\turnos\modificar_turno.Designer.vb">
+      <DependentUpon>modificar_turno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\turnos\modificar_turno.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -247,10 +288,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formularios\empleado\alta_barrio.resx">
+    <EmbeddedResource Include="Formularios\empleado\ciudad\barrio\alta_barrio.resx">
       <DependentUpon>alta_barrio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\empleado\alta_ciudad.resx">
+    <EmbeddedResource Include="Formularios\empleado\ciudad\barrio\modificar_barrio.resx">
+      <DependentUpon>modificar_barrio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\alta_ciudad.resx">
       <DependentUpon>alta_ciudad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\alta_contacto.resx">
@@ -262,8 +306,17 @@
     <EmbeddedResource Include="Formularios\alta_producto.resx">
       <DependentUpon>alta_producto.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\barrio\borrar_barrio.resx">
+      <DependentUpon>borrar_barrio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\borrar_ciudad.resx">
+      <DependentUpon>borrar_ciudad.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\empleado\borrar_empleado.resx">
       <DependentUpon>borrar_empleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\modificar_ciudad.resx">
+      <DependentUpon>modificar_ciudad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\empleado\modificar_empleado.resx">
       <DependentUpon>modificar_empleado.vb</DependentUpon>
@@ -274,10 +327,10 @@
     <EmbeddedResource Include="Formularios\puestos_trabajo\alta_puesto_trabajo.resx">
       <DependentUpon>alta_puesto_trabajo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\alta_turno.resx">
+    <EmbeddedResource Include="Formularios\turnos\alta_turno.resx">
       <DependentUpon>alta_turno.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\alta_usuario.resx">
+    <EmbeddedResource Include="Formularios\empleado\usuario\alta_usuario.resx">
       <DependentUpon>alta_usuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\proveedor\borrar_proveedor.resx">
@@ -289,7 +342,7 @@
     <EmbeddedResource Include="Formularios\Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\login.resx">
+    <EmbeddedResource Include="Formularios\empleado\usuario\login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\empleado\menu_empleado.resx">
@@ -310,7 +363,10 @@
     <EmbeddedResource Include="Formularios\puestos_trabajo\menu_puesto.resx">
       <DependentUpon>menu_puesto.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\menu_turno.resx">
+    <EmbeddedResource Include="Formularios\turnos\borrar_turno.resx">
+      <DependentUpon>borrar_turno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\turnos\menu_turno.resx">
       <DependentUpon>menu_turno.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\proveedor\modificar_proveedor.resx">
@@ -318,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\puestos_trabajo\modificar_puesto_trabajo.resx">
       <DependentUpon>modificar_puesto_trabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\turnos\modificar_turno.resx">
+      <DependentUpon>modificar_turno.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -327,6 +386,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -355,6 +425,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Arreter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

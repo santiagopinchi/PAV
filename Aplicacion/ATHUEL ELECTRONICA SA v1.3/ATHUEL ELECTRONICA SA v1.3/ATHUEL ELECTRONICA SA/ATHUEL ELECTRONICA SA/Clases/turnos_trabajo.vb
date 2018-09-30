@@ -7,7 +7,7 @@
 
     Public Sub insertar()
         Dim sql As String = ""
-        sql &= "INSERT turnos_trabajo (codTurno, horaInicio, horaFin)"
+        sql &= "INSERT turnos_trabajo (codTurno, horarioInicio, horarioFin)"
         sql &= "VALUES( " & _codigo
         sql &= ", '" & _horaInicio & "'"
         sql &= ", '" & _horaFin & "')"
@@ -18,9 +18,9 @@
     Public Sub modificar()
         Dim sql As String = ""
         sql &= "UPDATE turnos_trabajo "
-        sql &= "SET horaInicio = '" & _horaInicio & "'"
-        sql &= ", horaInicio = '" & _horaFin & "')"
-        sql &= "WHERE codTurno = " & Me._codigo
+        sql &= "SET horarioInicio = '" & _horaInicio & "'"
+        sql &= ", horarioFin = '" & _horaFin & "'"
+        sql &= " WHERE codTurno = " & Me._codigo
 
         Me._BD.INS_MOD_BOR(sql)
     End Sub
@@ -28,7 +28,7 @@
     Public Sub borrar(ByVal cod As String)
         Dim sql As String = ""
         sql &= "DELETE FROM turnos_trabajo"
-        sql &= "WHERE codTurno = " & cod
+        sql &= " WHERE codTurno = " & cod
 
         Me._BD.INS_MOD_BOR(sql)
     End Sub

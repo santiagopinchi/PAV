@@ -7,7 +7,7 @@
     Public Property apellido As String
     Public Property calle As String
     Public Property nroCalle As Integer
-    Public Property piso As Integer
+    Public Property piso As String
     Public Property dpto As String
     Public Property email As String
     Public Property fecha_ingreso As Date
