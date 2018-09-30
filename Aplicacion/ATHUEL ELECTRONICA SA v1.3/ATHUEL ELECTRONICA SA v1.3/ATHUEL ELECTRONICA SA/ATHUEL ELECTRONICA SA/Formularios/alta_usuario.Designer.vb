@@ -30,6 +30,8 @@ Partial Class alta_usuario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btn_cancelar = New System.Windows.Forms.Button()
+        Me.btn_agregar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -95,6 +97,28 @@ Partial Class alta_usuario
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'btn_cancelar
+        '
+        Me.btn_cancelar.BackgroundImage = CType(resources.GetObject("btn_cancelar.BackgroundImage"), System.Drawing.Image)
+        Me.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btn_cancelar.Location = New System.Drawing.Point(382, 148)
+        Me.btn_cancelar.Name = "btn_cancelar"
+        Me.btn_cancelar.Size = New System.Drawing.Size(62, 63)
+        Me.btn_cancelar.TabIndex = 83
+        Me.btn_cancelar.UseVisualStyleBackColor = True
+        '
+        'btn_agregar
+        '
+        Me.btn_agregar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_agregar.BackgroundImage = CType(resources.GetObject("btn_agregar.BackgroundImage"), System.Drawing.Image)
+        Me.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_agregar.Location = New System.Drawing.Point(271, 148)
+        Me.btn_agregar.Name = "btn_agregar"
+        Me.btn_agregar.Size = New System.Drawing.Size(62, 63)
+        Me.btn_agregar.TabIndex = 82
+        Me.btn_agregar.UseVisualStyleBackColor = False
+        '
         'alta_usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -102,6 +126,8 @@ Partial Class alta_usuario
         Me.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources._fondo_sistema
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(484, 218)
+        Me.Controls.Add(Me.btn_cancelar)
+        Me.Controls.Add(Me.btn_agregar)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -126,4 +152,6 @@ Partial Class alta_usuario
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btn_cancelar As Button
+    Friend WithEvents btn_agregar As Button
 End Class

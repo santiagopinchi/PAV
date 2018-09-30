@@ -62,10 +62,11 @@ Partial Class menu_proveedores
         '
         'atras
         '
-        Me.atras.Image = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Sin_título
-        Me.atras.Location = New System.Drawing.Point(41, 241)
+        Me.atras.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Fleche_Gauche
+        Me.atras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.atras.Location = New System.Drawing.Point(153, 226)
         Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(145, 45)
+        Me.atras.Size = New System.Drawing.Size(74, 74)
         Me.atras.TabIndex = 0
         Me.atras.UseVisualStyleBackColor = True
         '

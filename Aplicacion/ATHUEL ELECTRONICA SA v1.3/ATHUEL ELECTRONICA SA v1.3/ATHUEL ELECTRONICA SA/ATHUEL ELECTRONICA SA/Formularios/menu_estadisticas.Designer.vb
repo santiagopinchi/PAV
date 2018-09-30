@@ -20,9 +20,20 @@ Partial Class menu_estadisticas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.atras = New System.Windows.Forms.Button()
         Me.SuspendLayout()
+        '
+        'atras
+        '
+        Me.atras.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Fleche_Gauche
+        Me.atras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.atras.Location = New System.Drawing.Point(183, 201)
+        Me.atras.Name = "atras"
+        Me.atras.Size = New System.Drawing.Size(74, 74)
+        Me.atras.TabIndex = 1
+        Me.atras.UseVisualStyleBackColor = True
         '
         'menu_estadisticas
         '
@@ -31,6 +42,7 @@ Partial Class menu_estadisticas
         Me.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources._fondo_sistema
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(461, 287)
+        Me.Controls.Add(Me.atras)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "menu_estadisticas"
@@ -38,4 +50,6 @@ Partial Class menu_estadisticas
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents atras As Button
 End Class

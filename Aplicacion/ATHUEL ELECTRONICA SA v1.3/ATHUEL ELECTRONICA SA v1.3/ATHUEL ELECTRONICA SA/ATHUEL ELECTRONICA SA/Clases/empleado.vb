@@ -15,6 +15,15 @@
     Public Property id_barrio As Integer
 
     Public Sub insertar()
+
+        If _piso = "" Then
+            _piso = "NULL"
+        End If
+        If _dpto = "" Then
+            _dpto = "NULL"
+        End If
+
+
         Dim sql As String = ""
         sql = "INSERT INTO empleado ("
         sql &= " codTipodoc, numeroDocumento, nombre, apellido"
@@ -27,7 +36,7 @@
         sql &= ",'" & _apellido & "'"
         sql &= ",'" & _calle & "'"
         sql &= "," & _nroCalle
-        sql &= ",'" & _piso & "'"
+        sql &= "," & _piso
         sql &= ",'" & _dpto & "'"
         sql &= ",'" & _email & "'"
         sql &= ",'" & _fecha_ingreso & "'"

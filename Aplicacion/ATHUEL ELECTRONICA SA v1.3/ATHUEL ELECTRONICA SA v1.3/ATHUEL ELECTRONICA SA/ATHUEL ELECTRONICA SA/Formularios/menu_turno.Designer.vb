@@ -33,9 +33,9 @@ Partial Class menu_turno
         Me.atras.BackColor = System.Drawing.Color.Transparent
         Me.atras.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Fleche_Gauche
         Me.atras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.atras.Location = New System.Drawing.Point(151, 190)
+        Me.atras.Location = New System.Drawing.Point(142, 180)
         Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(66, 64)
+        Me.atras.Size = New System.Drawing.Size(74, 74)
         Me.atras.TabIndex = 0
         Me.atras.UseVisualStyleBackColor = False
         '

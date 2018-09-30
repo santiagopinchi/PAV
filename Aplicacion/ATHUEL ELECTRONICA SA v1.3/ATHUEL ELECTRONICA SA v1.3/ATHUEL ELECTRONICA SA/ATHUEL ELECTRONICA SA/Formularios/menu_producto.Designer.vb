@@ -30,10 +30,11 @@ Partial Class menu_producto
         '
         'atras
         '
-        Me.atras.Image = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Sin_título
-        Me.atras.Location = New System.Drawing.Point(31, 191)
+        Me.atras.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Fleche_Gauche
+        Me.atras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.atras.Location = New System.Drawing.Point(133, 166)
         Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(138, 48)
+        Me.atras.Size = New System.Drawing.Size(74, 74)
         Me.atras.TabIndex = 0
         Me.atras.UseVisualStyleBackColor = True
         '
@@ -71,6 +72,8 @@ Partial Class menu_producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources._fondo_sistema
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(360, 252)
         Me.Controls.Add(Me.atras)
         Me.Controls.Add(Me.borrar)

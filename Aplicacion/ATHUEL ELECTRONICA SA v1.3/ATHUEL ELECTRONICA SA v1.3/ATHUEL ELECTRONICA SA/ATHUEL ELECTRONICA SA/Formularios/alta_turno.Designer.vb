@@ -22,10 +22,13 @@ Partial Class alta_turno
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(alta_turno))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.btn_cancelar = New System.Windows.Forms.Button()
+        Me.btn_agregar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,6 +65,28 @@ Partial Class alta_turno
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 3
         '
+        'btn_cancelar
+        '
+        Me.btn_cancelar.BackgroundImage = CType(resources.GetObject("btn_cancelar.BackgroundImage"), System.Drawing.Image)
+        Me.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btn_cancelar.Location = New System.Drawing.Point(202, 108)
+        Me.btn_cancelar.Name = "btn_cancelar"
+        Me.btn_cancelar.Size = New System.Drawing.Size(62, 63)
+        Me.btn_cancelar.TabIndex = 83
+        Me.btn_cancelar.UseVisualStyleBackColor = True
+        '
+        'btn_agregar
+        '
+        Me.btn_agregar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_agregar.BackgroundImage = CType(resources.GetObject("btn_agregar.BackgroundImage"), System.Drawing.Image)
+        Me.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_agregar.Location = New System.Drawing.Point(91, 108)
+        Me.btn_agregar.Name = "btn_agregar"
+        Me.btn_agregar.Size = New System.Drawing.Size(62, 63)
+        Me.btn_agregar.TabIndex = 82
+        Me.btn_agregar.UseVisualStyleBackColor = False
+        '
         'alta_turno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -69,6 +94,8 @@ Partial Class alta_turno
         Me.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources._fondo_sistema
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(356, 183)
+        Me.Controls.Add(Me.btn_cancelar)
+        Me.Controls.Add(Me.btn_agregar)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
@@ -86,4 +113,6 @@ Partial Class alta_turno
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents btn_cancelar As Button
+    Friend WithEvents btn_agregar As Button
 End Class
