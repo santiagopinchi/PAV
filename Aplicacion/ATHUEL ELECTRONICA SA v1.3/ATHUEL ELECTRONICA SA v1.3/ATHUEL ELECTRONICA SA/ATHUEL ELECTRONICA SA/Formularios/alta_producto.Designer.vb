@@ -26,21 +26,21 @@ Partial Class alta_producto
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txt_cod_producto = New System.Windows.Forms.TextBox()
+        Me.cmb_tipo_producto = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txt_cantidad = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txt_descripcion = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.txt_modelo = New System.Windows.Forms.TextBox()
+        Me.cmb_marca = New System.Windows.Forms.ComboBox()
         Me.btn_cancelar = New System.Windows.Forms.Button()
         Me.btn_agregar = New System.Windows.Forms.Button()
+        Me.cmb_fecha_fabricacion = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -50,8 +50,8 @@ Partial Class alta_producto
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.txt_cod_producto)
+        Me.GroupBox1.Controls.Add(Me.cmb_tipo_producto)
         Me.GroupBox1.Location = New System.Drawing.Point(17, 24)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(483, 79)
@@ -77,36 +77,36 @@ Partial Class alta_producto
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Tipo de Producto:"
         '
-        'TextBox1
+        'txt_cod_producto
         '
-        Me.TextBox1.Location = New System.Drawing.Point(348, 36)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(126, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.txt_cod_producto.Location = New System.Drawing.Point(348, 36)
+        Me.txt_cod_producto.Name = "txt_cod_producto"
+        Me.txt_cod_producto.Size = New System.Drawing.Size(126, 20)
+        Me.txt_cod_producto.TabIndex = 1
         '
-        'ComboBox1
+        'cmb_tipo_producto
         '
-        Me.ComboBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(102, 35)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(136, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.cmb_tipo_producto.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmb_tipo_producto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_tipo_producto.FormattingEnabled = True
+        Me.cmb_tipo_producto.Location = New System.Drawing.Point(102, 35)
+        Me.cmb_tipo_producto.Name = "cmb_tipo_producto"
+        Me.cmb_tipo_producto.Size = New System.Drawing.Size(136, 21)
+        Me.cmb_tipo_producto.TabIndex = 0
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
+        Me.GroupBox2.Controls.Add(Me.cmb_fecha_fabricacion)
+        Me.GroupBox2.Controls.Add(Me.txt_cantidad)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.MaskedTextBox1)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.txt_descripcion)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
-        Me.GroupBox2.Controls.Add(Me.ComboBox2)
+        Me.GroupBox2.Controls.Add(Me.txt_modelo)
+        Me.GroupBox2.Controls.Add(Me.cmb_marca)
         Me.GroupBox2.Location = New System.Drawing.Point(17, 120)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(483, 138)
@@ -114,12 +114,12 @@ Partial Class alta_producto
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Descripción General"
         '
-        'TextBox4
+        'txt_cantidad
         '
-        Me.TextBox4.Location = New System.Drawing.Point(319, 107)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 8
+        Me.txt_cantidad.Location = New System.Drawing.Point(319, 107)
+        Me.txt_cantidad.Name = "txt_cantidad"
+        Me.txt_cantidad.Size = New System.Drawing.Size(100, 20)
+        Me.txt_cantidad.TabIndex = 4
         '
         'Label7
         '
@@ -130,15 +130,6 @@ Partial Class alta_producto
         Me.Label7.TabIndex = 2
         Me.Label7.Text = "Cantidad:"
         '
-        'MaskedTextBox1
-        '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(138, 108)
-        Me.MaskedTextBox1.Mask = "00/00/0000"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.MaskedTextBox1.TabIndex = 7
-        Me.MaskedTextBox1.ValidatingType = GetType(Date)
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -148,12 +139,12 @@ Partial Class alta_producto
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Fecha de Fabricación:"
         '
-        'TextBox3
+        'txt_descripcion
         '
-        Me.TextBox3.Location = New System.Drawing.Point(87, 72)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(385, 20)
-        Me.TextBox3.TabIndex = 5
+        Me.txt_descripcion.Location = New System.Drawing.Point(87, 72)
+        Me.txt_descripcion.Name = "txt_descripcion"
+        Me.txt_descripcion.Size = New System.Drawing.Size(385, 20)
+        Me.txt_descripcion.TabIndex = 2
         '
         'Label5
         '
@@ -182,22 +173,22 @@ Partial Class alta_producto
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Marca:"
         '
-        'TextBox2
+        'txt_modelo
         '
-        Me.TextBox2.Location = New System.Drawing.Point(319, 36)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.txt_modelo.Location = New System.Drawing.Point(319, 36)
+        Me.txt_modelo.Name = "txt_modelo"
+        Me.txt_modelo.Size = New System.Drawing.Size(153, 20)
+        Me.txt_modelo.TabIndex = 1
         '
-        'ComboBox2
+        'cmb_marca
         '
-        Me.ComboBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(61, 35)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(172, 21)
-        Me.ComboBox2.TabIndex = 0
+        Me.cmb_marca.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmb_marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_marca.FormattingEnabled = True
+        Me.cmb_marca.Location = New System.Drawing.Point(61, 35)
+        Me.cmb_marca.Name = "cmb_marca"
+        Me.cmb_marca.Size = New System.Drawing.Size(172, 21)
+        Me.cmb_marca.TabIndex = 0
         '
         'btn_cancelar
         '
@@ -207,7 +198,7 @@ Partial Class alta_producto
         Me.btn_cancelar.Location = New System.Drawing.Point(282, 278)
         Me.btn_cancelar.Name = "btn_cancelar"
         Me.btn_cancelar.Size = New System.Drawing.Size(62, 63)
-        Me.btn_cancelar.TabIndex = 81
+        Me.btn_cancelar.TabIndex = 3
         Me.btn_cancelar.UseVisualStyleBackColor = True
         '
         'btn_agregar
@@ -218,8 +209,17 @@ Partial Class alta_producto
         Me.btn_agregar.Location = New System.Drawing.Point(171, 278)
         Me.btn_agregar.Name = "btn_agregar"
         Me.btn_agregar.Size = New System.Drawing.Size(62, 63)
-        Me.btn_agregar.TabIndex = 80
+        Me.btn_agregar.TabIndex = 2
         Me.btn_agregar.UseVisualStyleBackColor = False
+        '
+        'cmb_fecha_fabricacion
+        '
+        Me.cmb_fecha_fabricacion.Checked = False
+        Me.cmb_fecha_fabricacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.cmb_fecha_fabricacion.Location = New System.Drawing.Point(138, 107)
+        Me.cmb_fecha_fabricacion.Name = "cmb_fecha_fabricacion"
+        Me.cmb_fecha_fabricacion.Size = New System.Drawing.Size(87, 20)
+        Me.cmb_fecha_fabricacion.TabIndex = 3
         '
         'alta_producto
         '
@@ -246,21 +246,21 @@ Partial Class alta_producto
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents cmb_tipo_producto As ComboBox
+    Friend WithEvents txt_cod_producto As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txt_modelo As TextBox
+    Friend WithEvents cmb_marca As ComboBox
+    Friend WithEvents txt_cantidad As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txt_descripcion As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents btn_cancelar As Button
     Friend WithEvents btn_agregar As Button
+    Friend WithEvents cmb_fecha_fabricacion As DateTimePicker
 End Class

@@ -21,4 +21,11 @@
             grilla.Rows.Add(tabla.Rows(c)(0), tabla.Rows(c)(1), tabla.Rows(c)(2))
         Next
     End Sub
+    Public Sub llenar_combo(ByVal cmb As ComboBox, ByVal source As Object, ByVal display As String, ByRef value As String)
+        cmb.DataSource = source
+        cmb.DisplayMember = display
+        cmb.ValueMember = value
+        cmb.SelectedIndex = -1
+    End Sub
+
 End Class
