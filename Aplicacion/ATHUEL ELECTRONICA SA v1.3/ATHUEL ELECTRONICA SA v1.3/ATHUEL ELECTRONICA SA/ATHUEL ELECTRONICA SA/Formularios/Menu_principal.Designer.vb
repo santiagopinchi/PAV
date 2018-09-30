@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Menu_principal
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Menu_principal
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu_principal))
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -38,7 +38,6 @@ Partial Class Menu_principal
         Me.btn_empleados = New System.Windows.Forms.Button()
         Me.btn_turnos = New System.Windows.Forms.Button()
         Me.cerrar_sesion = New System.Windows.Forms.Button()
-        Me.fin_sesion = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,7 +59,7 @@ Partial Class Menu_principal
         Me.Panel1.Controls.Add(Me.btn_proveedores)
         Me.Panel1.Controls.Add(Me.btn_empleados)
         Me.Panel1.Controls.Add(Me.btn_turnos)
-        Me.Panel1.Location = New System.Drawing.Point(103, 93)
+        Me.Panel1.Location = New System.Drawing.Point(256, 64)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(849, 614)
         Me.Panel1.TabIndex = 0
@@ -246,23 +245,14 @@ Partial Class Menu_principal
         '
         'cerrar_sesion
         '
-        Me.cerrar_sesion.Image = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.ico_cerrar_sesion
-        Me.cerrar_sesion.Location = New System.Drawing.Point(1228, 12)
+        Me.cerrar_sesion.BackColor = System.Drawing.Color.Transparent
+        Me.cerrar_sesion.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Arreter
+        Me.cerrar_sesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cerrar_sesion.Location = New System.Drawing.Point(1212, 26)
         Me.cerrar_sesion.Name = "cerrar_sesion"
-        Me.cerrar_sesion.Size = New System.Drawing.Size(55, 61)
+        Me.cerrar_sesion.Size = New System.Drawing.Size(72, 69)
         Me.cerrar_sesion.TabIndex = 13
-        Me.cerrar_sesion.UseVisualStyleBackColor = True
-        '
-        'fin_sesion
-        '
-        Me.fin_sesion.BackColor = System.Drawing.Color.Transparent
-        Me.fin_sesion.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.ico_cerrar_sesion
-        Me.fin_sesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.fin_sesion.Location = New System.Drawing.Point(950, 22)
-        Me.fin_sesion.Name = "fin_sesion"
-        Me.fin_sesion.Size = New System.Drawing.Size(56, 55)
-        Me.fin_sesion.TabIndex = 14
-        Me.fin_sesion.UseVisualStyleBackColor = False
+        Me.cerrar_sesion.UseVisualStyleBackColor = False
         '
         'Menu_principal
         '
@@ -270,8 +260,7 @@ Partial Class Menu_principal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1028, 749)
-        Me.Controls.Add(Me.fin_sesion)
+        Me.ClientSize = New System.Drawing.Size(1327, 749)
         Me.Controls.Add(Me.cerrar_sesion)
         Me.Controls.Add(Me.Panel1)
         Me.MaximizeBox = False
@@ -300,5 +289,4 @@ Partial Class Menu_principal
     Friend WithEvents Label6 As Label
     Friend WithEvents cerrar_sesion As Button
     Friend WithEvents Label7 As Label
-    Friend WithEvents fin_sesion As Button
 End Class

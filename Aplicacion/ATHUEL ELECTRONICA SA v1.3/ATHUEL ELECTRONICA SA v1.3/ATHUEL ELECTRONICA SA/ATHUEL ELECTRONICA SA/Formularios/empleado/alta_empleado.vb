@@ -50,7 +50,12 @@
         '    MsgBox("Se grabó con éxito el empleado")
         '    Me.blanquear()
         'End If
-
+        If txt_nro_piso.Text = "" Then
+            Me._empleado.piso = txt_nro_piso.Text = "NULL"
+        End If
+        If txt_dpto.Text = "" Then
+            Me._empleado.dpto = txt_dpto.Text = "NULL"
+        End If
         Me._empleado.insertar()
         MsgBox("Se grabó con éxito el empleado")
         Me.blanquear()

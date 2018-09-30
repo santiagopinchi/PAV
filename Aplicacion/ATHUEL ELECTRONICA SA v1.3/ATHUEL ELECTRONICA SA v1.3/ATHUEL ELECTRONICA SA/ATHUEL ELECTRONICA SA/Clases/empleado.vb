@@ -27,11 +27,11 @@
         sql &= ",'" & _apellido & "'"
         sql &= ",'" & _calle & "'"
         sql &= "," & _nroCalle
-        sql &= "," & _piso
+        sql &= ",'" & _piso & "'"
         sql &= ",'" & _dpto & "'"
         sql &= ",'" & _email & "'"
-        sql &= "," & _fecha_ingreso
-        sql &= "," & _fecha_nac
+        sql &= ",'" & _fecha_ingreso & "'"
+        sql &= ",'" & _fecha_nac & "'"
         sql &= "," & _id_barrio & ")"
         Me._BD.INS_MOD_BOR(sql)
     End Sub

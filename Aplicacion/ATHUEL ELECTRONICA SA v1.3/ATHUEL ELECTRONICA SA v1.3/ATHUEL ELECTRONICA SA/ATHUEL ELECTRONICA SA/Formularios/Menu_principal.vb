@@ -39,7 +39,7 @@
         MsgBox("Acceso denegado”, MsgBoxStyle.Critical, "Error")
     End Sub
 
-    Private Sub fin_sesion_Click(sender As Object, e As EventArgs) Handles fin_sesion.Click
+    Private Sub fin_sesion_Click(sender As Object, e As EventArgs)
         Dim loguear As New login
         loguear.estado_de_login = False
         loguear.ShowDialog()

@@ -33,6 +33,6 @@
 
 
     Private Sub cargar_grilla()
-        Me.dgv_01.DataSource = _BD.leo_tabla("SELECT * FROM empleado")
+        'Me.dgv_01.DataSource = _BD.leo_tabla("SELECT * FROM empleado")
     End Sub
 End Class

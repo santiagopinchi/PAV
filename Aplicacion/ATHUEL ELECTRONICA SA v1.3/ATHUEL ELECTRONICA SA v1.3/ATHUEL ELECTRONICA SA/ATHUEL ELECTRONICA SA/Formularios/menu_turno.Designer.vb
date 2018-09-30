@@ -30,12 +30,14 @@ Partial Class menu_turno
         '
         'atras
         '
-        Me.atras.Image = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Sin_título
-        Me.atras.Location = New System.Drawing.Point(40, 201)
+        Me.atras.BackColor = System.Drawing.Color.Transparent
+        Me.atras.BackgroundImage = Global.ATHUEL_ELECTRONICA_SA.My.Resources.Resources.Fleche_Gauche
+        Me.atras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.atras.Location = New System.Drawing.Point(151, 190)
         Me.atras.Name = "atras"
-        Me.atras.Size = New System.Drawing.Size(143, 45)
+        Me.atras.Size = New System.Drawing.Size(66, 64)
         Me.atras.TabIndex = 0
-        Me.atras.UseVisualStyleBackColor = True
+        Me.atras.UseVisualStyleBackColor = False
         '
         'borrar
         '
