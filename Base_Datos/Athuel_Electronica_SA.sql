@@ -17,7 +17,7 @@ create table proveedor
 (
 cuit bigint primary key not null,
 razonSocial varchar (50) not null,
-fechaInicioAct date,
+fechaInicioAct varchar (50),
 tipoProveedor char (1) not null
 )
 
@@ -61,7 +61,7 @@ descripcion text
 
 create table turnos_trabajo
 (
-codTurno bigint primary key not null,
+codTurno bigint identity (1,1) primary key not null,
 horarioInicio time not null,
 horarioFin time not null
 )
@@ -76,7 +76,7 @@ codProd bigint not null,
 codmarca bigint not null,
 descripcion text,
 modelo varchar (60),
-fechaFabricacion date,
+fechaFabricacion varchar (50),
 cantidad int,
 
 CONSTRAINT fk_Producto_Codigo_producto FOREIGN KEY (codTipoProd) REFERENCES tipos_productos(codTipoProd),
@@ -171,26 +171,15 @@ nroCalle bigint not null,
 piso bigint,
 dpto varchar (50),
 email varchar (50),
-fechaIngreso date not null,
-fechaNacimiento date not null,
+fechaIngreso varchar (50) not null,
+fechaNacimiento varchar (50) not null,
 codBarrio bigint not null,
+telefono bigint,
 
 CONSTRAINT fk_empleado_codigo_marca FOREIGN KEY (codBarrio) REFERENCES barrio(codBarrio),
 CONSTRAINT fk_empleado_Codigo_Documento FOREIGN KEY (codTipodoc) REFERENCES tipo_documento(codTipodoc)
 )
 
-
-create table telefonoXempleado
-(
-codArea bigint not null,
-numero bigint not null,
-legajo bigint not null,
-estado char
-
-CONSTRAINT fk_telefonoXempleado_legajo FOREIGN KEY (legajo) REFERENCES empleado(legajo)
-)
-
-ALTER TABLE telefonoXempleado ADD CONSTRAINT pk_telefonoXempleado PRIMARY KEY (codArea,numero,legajo)
 
 
 
@@ -199,7 +188,7 @@ create table empleadoXpuesto
 (
 legajo bigint not null,
 codPuesto bigint not null,
-fechaDesde date not null,
+fechaDesde varchar (50) not null,
 legajoJefe bigint,
 
 CONSTRAINT fk_empleadoXpeusto_legajo FOREIGN KEY (legajo) REFERENCES empleado(legajo),
@@ -353,8 +342,8 @@ INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (10, 'Administrac
 INSERT puestos_trabajo (codPuesto, nombre, descripcion) VALUES (11, 'Ayudante', NULL)
 
 
-INSERT turnos_trabajo (codTurno, horarioInicio, horarioFin) VALUES (1, '06:00:00', '14:00:00')
-INSERT turnos_trabajo (codTurno, horarioInicio, horarioFin) VALUES (2, '14:00:00', '22:00:00')
+INSERT turnos_trabajo (horarioInicio, horarioFin) VALUES ('06:00:00', '14:00:00')
+INSERT turnos_trabajo (horarioInicio, horarioFin) VALUES ('14:00:00', '22:00:00')
 
 
 INSERT barrio(nombre, codCiudad) VALUES ('Río Pipo', 1)
@@ -367,12 +356,14 @@ INSERT barrio(nombre, codCiudad) VALUES ('Don Bosco', 2)
 INSERT barrio(nombre, codCiudad) VALUES ('15 de Octubre', 2)
 INSERT barrio(nombre, codCiudad) VALUES ('Alem', 2)
 INSERT barrio(nombre, codCiudad) VALUES ('Almafuerte', 2)
+INSERT barrio(nombre, codCiudad) VALUES ('ninguno', 3)
+INSERT barrio(nombre, codCiudad) VALUES ('ninguno', 4)
 
 
-INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, fechaIngreso, fechaNacimiento, codBarrio) VALUES (1, 21705129, 'Raul', 'Martinez', 'Juan Facundo Quiroga 251', '2000-04-26', '1977-08-20', 2)
-INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, fechaIngreso, fechaNacimiento, codBarrio) VALUES (1, 29146375, 'Walter Tobias', 'Hahn', 'Av Maipú 1215', '2011-01-30', '1985-03-23', 4)
-INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, fechaIngreso, fechaNacimiento, codBarrio) VALUES (1, 34129127, 'Pamela', 'Gomez', 'Kawi 50', '2013-12-10', '1991-11-15', 9)
-INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, fechaIngreso, fechaNacimiento, codBarrio) VALUES (1, 32864761, 'María Eugenia', 'Vázquez', 'Prefectura Naval al 702', '2009-07-03', '1989-05-02', 7)
+INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, nroCalle, piso, dpto, email, fechaIngreso, fechaNacimiento, codBarrio, telefono) VALUES (1, 21705129, 'Raul', 'Martinez', 'Juan Facundo Quiroga', 250, 2, 'Soles', 'asdadsad','2000-04-26', '1977-08-20', 2,478968496)
+INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, nroCalle, piso, dpto, email, fechaIngreso, fechaNacimiento, codBarrio, telefono) VALUES (1, 29146375, 'Walter Tobias', 'Hahn', 'Av Maipú', 1215, 0, 'Familiar', 'sdasdasd', '2011-01-30', '1985-03-23', 4,56465456465)
+INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, nroCalle, piso, dpto, email, fechaIngreso, fechaNacimiento, codBarrio, telefono) VALUES (1, 34129127, 'Pamela', 'Gomez', 'Kawi', 50, 1, null, '2013-12-10', 'dfgdfgdfg','1991-11-15', 9,564854645)
+INSERT empleado (codTipodoc, numeroDocumento, nombre, apellido, calle, nroCalle, piso, dpto, email, fechaIngreso, fechaNacimiento, codBarrio, telefono) VALUES (1, 32864761, 'María Eugenia', 'Vázquez', 'Prefectura Naval al',702, 0, null, 'ewrwerwer','2009-07-03', '1989-05-02', 7,564879798)
 
 
 INSERT empleadoXpuesto (legajo, codPuesto, fechaDesde,legajoJefe) VALUES (1, 2, '2015-06-12', NULL)
