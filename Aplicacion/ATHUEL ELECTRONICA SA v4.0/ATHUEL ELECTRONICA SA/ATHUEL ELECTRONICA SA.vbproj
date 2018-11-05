@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F5E9B63-3909-42B0-B824-E94119331CAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ATHUEL_ELECTRONICA_SA.My.MyApplication</StartupObject>
+    <RootNamespace>ATHUEL_ELECTRONICA_SA</RootNamespace>
+    <AssemblyName>ATHUEL ELECTRONICA SA</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ATHUEL ELECTRONICA SA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ATHUEL ELECTRONICA SA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\barrio.vb" />
+    <Compile Include="Clases\ciudad.vb" />
+    <Compile Include="Clases\composicion.vb" />
+    <Compile Include="Clases\conexion_BD_transaccion.vb" />
+    <Compile Include="Clases\Contacto.vb" />
+    <Compile Include="Clases\empleado.vb" />
+    <Compile Include="Clases\plan.vb" />
+    <Compile Include="Clases\tipo_documento.vb" />
+    <Compile Include="Clases\tipo_producto.vb" />
+    <Compile Include="Clases\producto.vb" />
+    <Compile Include="Clases\conexion_BD.vb" />
+    <Compile Include="Clases\marca.vb" />
+    <Compile Include="Clases\proveedores.vb" />
+    <Compile Include="Clases\puesto_trabajo.vb" />
+    <Compile Include="Clases\tratamientos_especiales.vb" />
+    <Compile Include="Clases\turnos_trabajo.vb" />
+    <Compile Include="Clases\usuario.vb" />
+    <Compile Include="Conjunto de Datos\DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_contactosProveedor.Designer.vb">
+      <DependentUpon>est_contactosProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_contactosProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\est_empleadoBarrio.Designer.vb">
+      <DependentUpon>est_empleadoBarrio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_empleadoBarrio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\est_empleadoCiudad.Designer.vb">
+      <DependentUpon>est_empleadoCiudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_empleadoCiudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\est_empleadoJefe.Designer.vb">
+      <DependentUpon>est_empleadoJefe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_empleadoJefe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\est_empleadoPuesto.Designer.vb">
+      <DependentUpon>est_empleadoPuesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_empleadoPuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\est_productosMarcas.Designer.vb">
+      <DependentUpon>est_productosMarcas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_productosMarcas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\est_productosProveedor.Designer.vb">
+      <DependentUpon>est_productosProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_productosProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\est_productosTipos.Designer.vb">
+      <DependentUpon>est_productosTipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_productosTipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\est_proveedoresContactos.Designer.vb">
+      <DependentUpon>est_proveedoresContactos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_proveedoresContactos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\est_semanasAños.Designer.vb">
+      <DependentUpon>est_semanasAños.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\est_semanasAños.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\contacto\borrar_contacto.Designer.vb">
+      <DependentUpon>borrar_contacto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\contacto\borrar_contacto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\contacto\contactos.Designer.vb">
+      <DependentUpon>contactos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\contacto\contactos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\contacto\menu_contacto.Designer.vb">
+      <DependentUpon>menu_contacto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\contacto\menu_contacto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\contacto\modificar_contacto.Designer.vb">
+      <DependentUpon>modificar_contacto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\contacto\modificar_contacto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\buscar_jefe.Designer.vb">
+      <DependentUpon>buscar_jefe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\buscar_jefe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\alta_barrio.Designer.vb">
+      <DependentUpon>alta_barrio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\alta_barrio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\menu_barrio.Designer.vb">
+      <DependentUpon>menu_barrio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\menu_barrio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\modificar_barrio.Designer.vb">
+      <DependentUpon>modificar_barrio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\modificar_barrio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\alta_ciudad.Designer.vb">
+      <DependentUpon>alta_ciudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\alta_ciudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\contacto\alta_contacto.Designer.vb">
+      <DependentUpon>alta_contacto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\contacto\alta_contacto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\alta_empleado.Designer.vb">
+      <DependentUpon>alta_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\alta_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\menu_ciudad.Designer.vb">
+      <DependentUpon>menu_ciudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\menu_ciudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\usuario\modificar_usuario.Designer.vb">
+      <DependentUpon>modificar_usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\usuario\modificar_usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\usuario\restaurar_usuario.Designer.vb">
+      <DependentUpon>restaurar_usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\usuario\restaurar_usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frm_menu_estadisticas_reportes.Designer.vb">
+      <DependentUpon>frm_menu_estadisticas_reportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frm_menu_estadisticas_reportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\procesos\cargar_manual.Designer.vb">
+      <DependentUpon>cargar_manual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\procesos\cargar_manual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\procesos\composicion_producto.Designer.vb">
+      <DependentUpon>composicion_producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\procesos\composicion_producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\procesos\consultar_manual.Designer.vb">
+      <DependentUpon>consultar_manual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\procesos\consultar_manual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\procesos\gestion_contacto.Designer.vb">
+      <DependentUpon>gestion_contacto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\procesos\gestion_contacto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\procesos\historial_puesto.Designer.vb">
+      <DependentUpon>historial_puesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\procesos\historial_puesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\procesos\menu_procesos.Designer.vb">
+      <DependentUpon>menu_procesos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\procesos\menu_procesos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\procesos\planificacion.Designer.vb">
+      <DependentUpon>planificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\procesos\planificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\alta_producto.Designer.vb">
+      <DependentUpon>alta_producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\alta_producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\borrar_barrio.Designer.vb">
+      <DependentUpon>borrar_barrio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\barrio\borrar_barrio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\borrar_ciudad.Designer.vb">
+      <DependentUpon>borrar_ciudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\borrar_ciudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\borrar_empleado.Designer.vb">
+      <DependentUpon>borrar_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\borrar_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\modificar_ciudad.Designer.vb">
+      <DependentUpon>modificar_ciudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\ciudad\modificar_ciudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\modificar_empleado.Designer.vb">
+      <DependentUpon>modificar_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\modificar_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\borrar_producto.Designer.vb">
+      <DependentUpon>borrar_producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\borrar_producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\marca\alta_marca.Designer.vb">
+      <DependentUpon>alta_marca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\marca\alta_marca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\marca\baja_marca.Designer.vb">
+      <DependentUpon>baja_marca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\marca\baja_marca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\marca\menu_marca.Designer.vb">
+      <DependentUpon>menu_marca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\marca\menu_marca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\marca\modificar_marca.Designer.vb">
+      <DependentUpon>modificar_marca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\marca\modificar_marca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\modificar_producto.Designer.vb">
+      <DependentUpon>modificar_producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\modificar_producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\tipo_producto\alta_tipo_prod.Designer.vb">
+      <DependentUpon>alta_tipo_prod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\tipo_producto\alta_tipo_prod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\tipo_producto\baja_tipo_prod.Designer.vb">
+      <DependentUpon>baja_tipo_prod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\tipo_producto\baja_tipo_prod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\tipo_producto\menu_tipo_prod.Designer.vb">
+      <DependentUpon>menu_tipo_prod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\tipo_producto\menu_tipo_prod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\tipo_producto\modificar_tipo_prod.Designer.vb">
+      <DependentUpon>modificar_tipo_prod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\tipo_producto\modificar_tipo_prod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\proveedor\alta_proveedor.Designer.vb">
+      <DependentUpon>alta_proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\proveedor\alta_proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\puestos_trabajo\alta_puesto_trabajo.Designer.vb">
+      <DependentUpon>alta_puesto_trabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\puestos_trabajo\alta_puesto_trabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\turnos\alta_turno.Designer.vb">
+      <DependentUpon>alta_turno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\turnos\alta_turno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\usuario\alta_usuario.Designer.vb">
+      <DependentUpon>alta_usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\usuario\alta_usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\proveedor\borrar_proveedor.Designer.vb">
+      <DependentUpon>borrar_proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\proveedor\borrar_proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\puestos_trabajo\Borrar_puesto_trabajo.Designer.vb">
+      <DependentUpon>Borrar_puesto_trabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\puestos_trabajo\Borrar_puesto_trabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\usuario\login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\usuario\login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\empleado\menu_empleado.Designer.vb">
+      <DependentUpon>menu_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\empleado\menu_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Menu_principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Menu_principal.Designer.vb">
+      <DependentUpon>Menu_principal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\producto\menu_producto.Designer.vb">
+      <DependentUpon>menu_producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\producto\menu_producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\proveedor\menu_proveedores.Designer.vb">
+      <DependentUpon>menu_proveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\proveedor\menu_proveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\puestos_trabajo\menu_puesto.Designer.vb">
+      <DependentUpon>menu_puesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\puestos_trabajo\menu_puesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\turnos\borrar_turno.Designer.vb">
+      <DependentUpon>borrar_turno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\turnos\borrar_turno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\turnos\menu_turno.Designer.vb">
+      <DependentUpon>menu_turno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\turnos\menu_turno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\proveedor\modificar_proveedor.Designer.vb">
+      <DependentUpon>modificar_proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\proveedor\modificar_proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\puestos_trabajo\modificar_puesto_trabajo.Designer.vb">
+      <DependentUpon>modificar_puesto_trabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\puestos_trabajo\modificar_puesto_trabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\turnos\modificar_turno.Designer.vb">
+      <DependentUpon>modificar_turno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\turnos\modificar_turno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Conjunto de Datos\DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_ciudad.Designer.vb">
+      <DependentUpon>reporte_ciudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_ciudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporte_contacto.Designer.vb">
+      <DependentUpon>reporte_contacto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_contacto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporte_empleado.Designer.vb">
+      <DependentUpon>reporte_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporte_historial.Designer.vb">
+      <DependentUpon>reporte_historial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_historial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporte_marca.Designer.vb">
+      <DependentUpon>reporte_marca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_marca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporte_planificacion.Designer.vb">
+      <DependentUpon>reporte_planificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_planificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporte_producto_marca.Designer.vb">
+      <DependentUpon>reporte_producto_marca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_producto_marca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporte_proveedor.Designer.vb">
+      <DependentUpon>reporte_proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporte_puesto.Designer.vb">
+      <DependentUpon>reporte_puesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_puesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporte_tipos_producto.Designer.vb">
+      <DependentUpon>reporte_tipos_producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_tipos_producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Estadisticas\est_contactosProveedor.resx">
+      <DependentUpon>est_contactosProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\est_empleadoBarrio.resx">
+      <DependentUpon>est_empleadoBarrio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\est_empleadoCiudad.resx">
+      <DependentUpon>est_empleadoCiudad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\est_empleadoJefe.resx">
+      <DependentUpon>est_empleadoJefe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\est_empleadoPuesto.resx">
+      <DependentUpon>est_empleadoPuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\est_productosMarcas.resx">
+      <DependentUpon>est_productosMarcas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\est_productosProveedor.resx">
+      <DependentUpon>est_productosProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\est_productosTipos.resx">
+      <DependentUpon>est_productosTipos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\est_proveedoresContactos.resx">
+      <DependentUpon>est_proveedoresContactos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\est_semanasAños.resx">
+      <DependentUpon>est_semanasAños.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\GraficoContactosProveedores.rdlc" />
+    <EmbeddedResource Include="Estadisticas\GraficoEmpleadoBarrio.rdlc" />
+    <EmbeddedResource Include="Estadisticas\GraficoEmpleadoCiudad.rdlc" />
+    <EmbeddedResource Include="Estadisticas\GraficoEmpleadoJefe.rdlc" />
+    <EmbeddedResource Include="Estadisticas\GraficoEmpleadoPuesto.rdlc" />
+    <EmbeddedResource Include="Estadisticas\GraficoProductosMarcas.rdlc" />
+    <EmbeddedResource Include="Estadisticas\GraficoProductosProveedor.rdlc" />
+    <EmbeddedResource Include="Estadisticas\GraficoProveedoresContactos.rdlc" />
+    <EmbeddedResource Include="Estadisticas\GraficoSemanaAños.rdlc" />
+    <EmbeddedResource Include="Estadisticas\GraficosProductosTipos.rdlc" />
+    <EmbeddedResource Include="Formularios\contacto\borrar_contacto.resx">
+      <DependentUpon>borrar_contacto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\contacto\contactos.resx">
+      <DependentUpon>contactos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\contacto\menu_contacto.resx">
+      <DependentUpon>menu_contacto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\contacto\modificar_contacto.resx">
+      <DependentUpon>modificar_contacto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\buscar_jefe.resx">
+      <DependentUpon>buscar_jefe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\barrio\alta_barrio.resx">
+      <DependentUpon>alta_barrio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\barrio\menu_barrio.resx">
+      <DependentUpon>menu_barrio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\barrio\modificar_barrio.resx">
+      <DependentUpon>modificar_barrio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\alta_ciudad.resx">
+      <DependentUpon>alta_ciudad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\contacto\alta_contacto.resx">
+      <DependentUpon>alta_contacto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\alta_empleado.resx">
+      <DependentUpon>alta_empleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\menu_ciudad.resx">
+      <DependentUpon>menu_ciudad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\usuario\modificar_usuario.resx">
+      <DependentUpon>modificar_usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\usuario\restaurar_usuario.resx">
+      <DependentUpon>restaurar_usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frm_menu_estadisticas_reportes.resx">
+      <DependentUpon>frm_menu_estadisticas_reportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\procesos\cargar_manual.resx">
+      <DependentUpon>cargar_manual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\procesos\composicion_producto.resx">
+      <DependentUpon>composicion_producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\procesos\consultar_manual.resx">
+      <DependentUpon>consultar_manual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\procesos\gestion_contacto.resx">
+      <DependentUpon>gestion_contacto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\procesos\historial_puesto.resx">
+      <DependentUpon>historial_puesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\procesos\menu_procesos.resx">
+      <DependentUpon>menu_procesos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\procesos\planificacion.resx">
+      <DependentUpon>planificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\alta_producto.resx">
+      <DependentUpon>alta_producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\barrio\borrar_barrio.resx">
+      <DependentUpon>borrar_barrio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\borrar_ciudad.resx">
+      <DependentUpon>borrar_ciudad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\borrar_empleado.resx">
+      <DependentUpon>borrar_empleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\ciudad\modificar_ciudad.resx">
+      <DependentUpon>modificar_ciudad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\modificar_empleado.resx">
+      <DependentUpon>modificar_empleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\borrar_producto.resx">
+      <DependentUpon>borrar_producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\marca\alta_marca.resx">
+      <DependentUpon>alta_marca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\marca\baja_marca.resx">
+      <DependentUpon>baja_marca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\marca\menu_marca.resx">
+      <DependentUpon>menu_marca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\marca\modificar_marca.resx">
+      <DependentUpon>modificar_marca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\modificar_producto.resx">
+      <DependentUpon>modificar_producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\tipo_producto\alta_tipo_prod.resx">
+      <DependentUpon>alta_tipo_prod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\tipo_producto\baja_tipo_prod.resx">
+      <DependentUpon>baja_tipo_prod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\tipo_producto\menu_tipo_prod.resx">
+      <DependentUpon>menu_tipo_prod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\tipo_producto\modificar_tipo_prod.resx">
+      <DependentUpon>modificar_tipo_prod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\proveedor\alta_proveedor.resx">
+      <DependentUpon>alta_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\puestos_trabajo\alta_puesto_trabajo.resx">
+      <DependentUpon>alta_puesto_trabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\turnos\alta_turno.resx">
+      <DependentUpon>alta_turno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\usuario\alta_usuario.resx">
+      <DependentUpon>alta_usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\proveedor\borrar_proveedor.resx">
+      <DependentUpon>borrar_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\puestos_trabajo\Borrar_puesto_trabajo.resx">
+      <DependentUpon>Borrar_puesto_trabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\usuario\login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\empleado\menu_empleado.resx">
+      <DependentUpon>menu_empleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Menu_principal.resx">
+      <DependentUpon>Menu_principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\producto\menu_producto.resx">
+      <DependentUpon>menu_producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\proveedor\menu_proveedores.resx">
+      <DependentUpon>menu_proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\puestos_trabajo\menu_puesto.resx">
+      <DependentUpon>menu_puesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\turnos\borrar_turno.resx">
+      <DependentUpon>borrar_turno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\turnos\menu_turno.resx">
+      <DependentUpon>menu_turno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\proveedor\modificar_proveedor.resx">
+      <DependentUpon>modificar_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\puestos_trabajo\modificar_puesto_trabajo.resx">
+      <DependentUpon>modificar_puesto_trabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\turnos\modificar_turno.resx">
+      <DependentUpon>modificar_turno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteProductosPorMarcas2.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteTiposProductos.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportePuestos.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteProveedores.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportePlanificaciones.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteMarcas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteHistoriales.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEmpleados.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteContactos.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCiudades.rdlc" />
+    <EmbeddedResource Include="Reportes\reporte_ciudad.resx">
+      <DependentUpon>reporte_ciudad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_contacto.resx">
+      <DependentUpon>reporte_contacto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_empleado.resx">
+      <DependentUpon>reporte_empleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_historial.resx">
+      <DependentUpon>reporte_historial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_marca.resx">
+      <DependentUpon>reporte_marca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_planificacion.resx">
+      <DependentUpon>reporte_planificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_producto_marca.resx">
+      <DependentUpon>reporte_producto_marca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_proveedor.resx">
+      <DependentUpon>reporte_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_puesto.resx">
+      <DependentUpon>reporte_puesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_tipos_producto.resx">
+      <DependentUpon>reporte_tipos_producto.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Conjunto de Datos\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Conjunto de Datos\DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Conjunto de Datos\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_cerrar_sesion %28copia%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_cerrar_sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sin título.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-fondo_sistema.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fleche Gauche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arreter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66edbf7779c60bbdc43ad3061f8a7741.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_31973739-stock-photo-recycle-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-magnify_47867.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procesos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engranajes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electronica_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-chroma-key-check-mark-tilde-symbol-green-tick-5ac32c3e1d4770.2128125115227402861199.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbols-Delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-chroma-key-check-mark-tilde-symbol-green-tick-5ac32c3e1d4770.21281251152274028611991.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_delete_exit_1577.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Add User Male-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Remove User Male-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbols-Delete-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-chroma-key-check-mark-tilde-symbol-green-tick-5ac32c3e1d4770.21281251152274028611992.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Add User Male-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-chroma-key-check-mark-tilde-symbol-green-tick-5ac32c3e1d4770.21281251152274028611993.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbols-Delete-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basura1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbols-Delete-icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reporte_I.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bars-chart-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CorbeilleRemplie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-waste-container-clip-art-cartoon-trash-can-5a7da09648d153.5921540115181825502983.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Registration-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Checked User Male-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Find User Male-50.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
