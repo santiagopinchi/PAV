@@ -212,13 +212,17 @@
             transferir_datos_empleado()
             Me._empleado.modificar()
             If _legajo <> 0 Then
-                _BD.INS_MOD_BOR("INSERT empleadoXpuesto  (legajo, codPuesto, fechaDesde, legajoJefe) VALUES (" & _empleado.legajo & ", " & cmb_puesto.SelectedValue & ", '" & cmb_fecha_registro.Text & "', " & _legajo & ")")
-                MsgBox("Se grabó con éxito el empleado")
-            Else
-                _BD.INS_MOD_BOR("INSERT empleadoXpuesto  (legajo, codPuesto, fechaDesde, legajoJefe) VALUES (" & _empleado.legajo & ", " & cmb_puesto.SelectedValue & ", '" & cmb_fecha_registro.Text & "', Null)")
-                MsgBox("Se grabó con éxito el empleado")
+                Dim tabla As New DataTable
+                tabla = _BD.leo_tabla("SELECT * FROM empleadoXpuesto WHERE legajo =" & _legajo & " AND codPuesto= " & cmb_puesto.SelectedValue)
+                If tabla.Rows.Count = 0 Then
+                    _BD.INS_MOD_BOR("INSERT empleadoXpuesto  (legajo, codPuesto, fechaDesde, legajoJefe) VALUES (" & _empleado.legajo & ", " & cmb_puesto.SelectedValue & ", '" & cmb_fecha_registro.Text & "', " & _legajo & ")")
+                    MsgBox("Se grabó con éxito el empleado")
+                End If
+                'Else
+                '    _BD.INS_MOD_BOR("INSERT empleadoXpuesto  (legajo, codPuesto, fechaDesde, legajoJefe) VALUES (" & _empleado.legajo & ", " & cmb_puesto.SelectedValue & ", '" & cmb_fecha_registro.Text & "', Null)")
+                '    MsgBox("Se grabó con éxito el empleado")
             End If
-            Me.blanquear()
+                Me.blanquear()
             Me.cargar_grilla()
             txt_legajo.Enabled = True
             cmb_fecha_registro.Enabled = True

@@ -77,12 +77,27 @@
 
     Public Sub cargar_grilla()
         Dim tabla As New DataTable
-        tabla = BD.leo_tabla("SELECT t.nombre, p.razonSocial, c.nombre, c.Apellido, c.mail, c.telefono  FROM  proveedor p, tipos_productos t, contacto c, productoXproveedor pp WHERE p.cuit = pp.cuit AND t.codTipoProd = pp.codTipoProd AND c.codTipodoc= pp.codTipodocCont AND c.numeroDocumento= pp.numeroDocumentoCont")
+        tabla = BD.leo_tabla("SELECT t.nombre, p.razonSocial, pp.codTipodocCont, pp.numeroDocumentoCont, c.nombre, c.Apellido, c.mail, c.telefono  FROM  proveedor p, tipos_productos t, contacto c, productoXproveedor pp WHERE p.cuit = pp.cuit AND t.codTipoProd = pp.codTipoProd AND c.codTipodoc= pp.codTipodocCont AND c.numeroDocumento= pp.numeroDocumentoCont")
         dgv.Rows.Clear()
         Dim c As Integer = 0
         For c = 0 To tabla.Rows.Count - 1
-            dgv.Rows.Add(tabla.Rows(c)(0), tabla.Rows(c)(1), tabla.Rows(c)(2), tabla.Rows(c)(3), tabla.Rows(c)(4), tabla.Rows(c)(5))
+            dgv.Rows.Add(tabla.Rows(c)(0), tabla.Rows(c)(1), tabla.Rows(c)(2), tabla.Rows(c)(3), tabla.Rows(c)(4), tabla.Rows(c)(5), tabla.Rows(c)(6), tabla.Rows(c)(7))
         Next
     End Sub
+
+    'Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellClick
+    '    Dim tabla As New DataTable
+    '    cmb_tipo_producto.SelectedValue = dgv.CurrentRow.Cells(0).Value
+    '    cmb_proveedor.SelectedValue = dgv.CurrentRow.Cells(1).Value
+    '    _tipoDoc = dgv.CurrentRow.Cells(2).Value
+    '    _numeroDoc = dgv.CurrentRow.Cells(3).Value
+
+    '    tabla = BD.leo_tabla("SELECT * FROM contacto WHERE codTipodoc = " & _tipoDoc & " AND numeroDocumento = " & _numeroDoc)
+
+    '    cmb_tipo_doc.SelectedValue = _tipoDoc
+    '    txt_nro_doc.Text = _numeroDoc
+    '    txt_apellido.Text = tabla.Rows(0)("apellido")
+    '    txt_nombre.Text = tabla.Rows(0)("nombre")
+    'End Sub
 
 End Class

@@ -30,6 +30,7 @@ Partial Class reporte_contacto
         Me.txt_info = New System.Windows.Forms.MaskedTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_buscar = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -64,6 +65,7 @@ Partial Class reporte_contacto
         Me.txt_info.Name = "txt_info"
         Me.txt_info.Size = New System.Drawing.Size(103, 20)
         Me.txt_info.TabIndex = 9
+        Me.ToolTip1.SetToolTip(Me.txt_info, "Forma de Busqueda: " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Por Nro. Doc. o por Apellido.")
         '
         'Label1
         '
@@ -113,4 +115,5 @@ Partial Class reporte_contacto
     Friend WithEvents DataSet1BindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents btn_buscar As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

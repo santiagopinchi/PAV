@@ -2,7 +2,7 @@
 
     Dim conexion As New OleDb.OleDbConnection
     Dim cmd As New OleDb.OleDbCommand
-    Dim _cadena_conexion As String = "Provider=SQLNCLI11;Data Source=DESKTOP-RMR539N;Integrated Security=SSPI;Initial Catalog=Athuel_Electronica_SA"
+    Dim _cadena_conexion As String = "Provider=SQLNCLI11;Data Source=LENOVO-GONZALO\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=Athuel_Electronica_SA"
     'Public Property cadena_conexion As String
     Private Sub conectar()
         conexion.ConnectionString = _cadena_conexion

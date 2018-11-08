@@ -6,9 +6,18 @@
         Dim sql As String = "SELECT * FROM contacto"
         Dim tabla As New DataTable
         If IsNumeric(txt_info.Text) Then
+            If IsNumeric(txt_info.Text) Then
+                If txt_info.Text > 0 Then
+                    sql &= " WHERE numeroDocumento=" & txt_info.Text
+                Else
+                    MsgBox("Error de dato.")
+                    txt_info.Clear()
+                    Exit Sub
+                End If
 
-            sql &= " WHERE numeroDocumento= " & txt_info.Text
-
+            Else
+                MsgBox("No se ha ingresado el Número de Documento")
+            End If
         Else
             If txt_info.Text.IndexOf("-") >= 1 Then
                 Dim extremo As String()
@@ -19,9 +28,9 @@
                     MsgBox("Error en el dato a ingresar")
                 End If
             Else
-
-                sql &= " WHERE apellido like '%" & txt_info.Text & "%'"
-
+                If txt_info.Text <> "" Then
+                    sql &= " WHERE apellido like '%" & txt_info.Text & "%'"
+                End If
             End If
         End If
         tabla = conexion.leo_tabla(sql)

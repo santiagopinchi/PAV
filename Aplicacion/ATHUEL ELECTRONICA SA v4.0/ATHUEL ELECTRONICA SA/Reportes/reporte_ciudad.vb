@@ -5,9 +5,15 @@
         Dim sql As String = "SELECT * FROM ciudad"
         Dim tabla As New DataTable
         If IsNumeric(txt_info.Text) Then
-            sql &= " WHERE codCiudad = " & txt_info.Text
+            If txt_info.Text > 0 Then
+                sql &= " WHERE codCiudad = " & txt_info.Text
+            Else
+                MsgBox("Error de dato.")
+                txt_info.Clear()
+                Exit Sub
+            End If
         Else
-            If txt_info.Text.IndexOf("-") >= 1 Then
+                If txt_info.Text.IndexOf("-") >= 1 Then
                 Dim extremo As String()
                 extremo = txt_info.Text.Split("-")
                 If IsNumeric(extremo(0)) And IsNumeric(extremo(1)) Then

@@ -41,6 +41,8 @@ Partial Class gestion_contacto
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.nombreProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.razonSocial = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodTipoDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.mail = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -213,7 +215,7 @@ Partial Class gestion_contacto
         Me.dgv.AllowUserToAddRows = False
         Me.dgv.AllowUserToDeleteRows = False
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombreProducto, Me.razonSocial, Me.nombre, Me.Apellido, Me.mail, Me.telefono})
+        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombreProducto, Me.razonSocial, Me.CodTipoDoc, Me.NumDoc, Me.nombre, Me.Apellido, Me.mail, Me.telefono})
         Me.dgv.Location = New System.Drawing.Point(75, 178)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
@@ -233,6 +235,20 @@ Partial Class gestion_contacto
         Me.razonSocial.Name = "razonSocial"
         Me.razonSocial.ReadOnly = True
         Me.razonSocial.Width = 95
+        '
+        'CodTipoDoc
+        '
+        Me.CodTipoDoc.HeaderText = "CodTipoDoc"
+        Me.CodTipoDoc.Name = "CodTipoDoc"
+        Me.CodTipoDoc.ReadOnly = True
+        Me.CodTipoDoc.Visible = False
+        '
+        'NumDoc
+        '
+        Me.NumDoc.HeaderText = "NumDoc"
+        Me.NumDoc.Name = "NumDoc"
+        Me.NumDoc.ReadOnly = True
+        Me.NumDoc.Visible = False
         '
         'nombre
         '
@@ -299,6 +315,8 @@ Partial Class gestion_contacto
     Friend WithEvents dgv As System.Windows.Forms.DataGridView
     Friend WithEvents nombreProducto As DataGridViewTextBoxColumn
     Friend WithEvents razonSocial As DataGridViewTextBoxColumn
+    Friend WithEvents CodTipoDoc As DataGridViewTextBoxColumn
+    Friend WithEvents NumDoc As DataGridViewTextBoxColumn
     Friend WithEvents nombre As DataGridViewTextBoxColumn
     Friend WithEvents Apellido As DataGridViewTextBoxColumn
     Friend WithEvents mail As DataGridViewTextBoxColumn

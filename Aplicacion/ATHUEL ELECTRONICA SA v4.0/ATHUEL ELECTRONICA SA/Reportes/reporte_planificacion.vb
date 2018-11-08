@@ -4,13 +4,20 @@
         Dim sql As String = "SELECT * FROM planificacion"
         Dim tabla As New DataTable
         If IsNumeric(txt_info.Text) Then
-            sql &= " WHERE codigo = " & txt_info.Text
+            If txt_info.Text > 0 Then
+                sql &= " WHERE año = " & txt_info.Text
+            Else
+                MsgBox("Error de dato.")
+                txt_info.Clear()
+                Exit Sub
+            End If
+
         Else
             If txt_info.Text.IndexOf("-") >= 1 Then
                 Dim extremo As String()
                 extremo = txt_info.Text.Split("-")
                 If IsNumeric(extremo(0)) And IsNumeric(extremo(1)) Then
-                    sql &= " WHERE codigo BETWEEN " & extremo(0) & " AND " & extremo(1)
+                    sql &= " WHERE año BETWEEN " & extremo(0) & " AND " & extremo(1)
                 Else
                     MsgBox("Error en dato de calculo")
                     Exit Sub

@@ -30,6 +30,7 @@ Partial Class reporte_historial
         Me.rv1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.txt_info = New System.Windows.Forms.MaskedTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.listado_empleado_puestoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -73,6 +74,7 @@ Partial Class reporte_historial
         Me.txt_info.Name = "txt_info"
         Me.txt_info.Size = New System.Drawing.Size(103, 20)
         Me.txt_info.TabIndex = 13
+        Me.ToolTip1.SetToolTip(Me.txt_info, "Forma de Busqueda: " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Por Legajos o rango legajos.")
         '
         'Label1
         '
@@ -113,4 +115,5 @@ Partial Class reporte_historial
     Friend WithEvents Label1 As Label
     Friend WithEvents listado_empleado_puestoBindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet1
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

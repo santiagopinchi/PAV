@@ -6,24 +6,31 @@
         Dim tabla As New DataTable
 
         If IsNumeric(txt_info.Text) Then
-
-            sql &= " WHERE legajo=" & txt_info.Text
+            If txt_info.Text > 0 Then
+                sql &= " WHERE numeroDocumento = " & txt_info.Text
+            Else
+                MsgBox("Error de dato.")
+                txt_info.Clear()
+                Exit Sub
+            End If
 
         Else
             If txt_info.Text.IndexOf("-") >= 1 Then
                 Dim extremos As String()
                 extremos = txt_info.Text.Split("-")
                 If IsNumeric(extremos(0)) And IsNumeric(extremos(1)) Then
-                    sql &= " WHERE BETWEEN" & extremos(0) & " AND " & extremos(1)
+                    sql &= " WHERE numeroDocumento BETWEEN " & extremos(0) & " AND " & extremos(1)
                 Else
                     MsgBox("Error en el dato a ingresar")
                 End If
             Else
-                sql &= " WHERE apellido like '%" & txt_info.Text & "%'"
-
-
-
+                If txt_info.Text <> "" Then
+                    sql &= " WHERE apellido like '%" & txt_info.Text & "%'"
+                Else
+                End If
             End If
+
+
         End If
 
         tabla = BD.leo_tabla(sql)

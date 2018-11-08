@@ -32,6 +32,7 @@ Partial Class reporte_tipos_producto
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_codigo_tipo = New System.Windows.Forms.MaskedTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.listado_tipoProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -92,6 +93,7 @@ Partial Class reporte_tipos_producto
         Me.txt_codigo_tipo.Name = "txt_codigo_tipo"
         Me.txt_codigo_tipo.Size = New System.Drawing.Size(100, 20)
         Me.txt_codigo_tipo.TabIndex = 23
+        Me.ToolTip1.SetToolTip(Me.txt_codigo_tipo, "Recordar que el código del producto es alfanumérico.")
         '
         'Label3
         '
@@ -136,4 +138,5 @@ Partial Class reporte_tipos_producto
     Friend WithEvents Label2 As Label
     Friend WithEvents txt_codigo_tipo As MaskedTextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

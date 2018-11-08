@@ -120,7 +120,7 @@
         _calle = tabla.Rows(0)("calle")
         _nroCalle = tabla.Rows(0)("nroCalle")
         _piso = tabla.Rows(0)("piso")
-        _dpto = tabla.Rows(0)("dpto")
+        _dpto = tabla.Rows(0)("dpto").ToString
         _email = tabla.Rows(0)("email")
         _fecha_ingreso = tabla.Rows(0)("fechaIngreso")
         _fecha_nac = tabla.Rows(0)("fechaNacimiento")

@@ -4,7 +4,15 @@
         Dim sql As String = "SELECT * FROM proveedor"
         Dim tabla As New DataTable
         If IsNumeric(txt_info.Text) Then
-            sql &= " WHERE cuit  = " & txt_info.Text
+            If txt_info.Text > 0 Then
+                sql &= " WHERE cuit  = " & txt_info.Text
+            Else
+                MsgBox("Error de dato.")
+                txt_info.Clear()
+                Exit Sub
+            End If
+
+
         Else
             If txt_info.Text.IndexOf("-") >= 1 Then
                 Dim extremo As String()

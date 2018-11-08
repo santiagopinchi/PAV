@@ -74,6 +74,7 @@
                 BD.INS_MOD_BOR("UPDATE planificacion SET codturno = " & cmb_turno.SelectedValue & ", semana = " & Integer.Parse(txt_semana.Text) & ", año = " & Integer.Parse(txt_año.Text) & " WHERE codigo = " & _codigoPlan)
                 MsgBox("Se modifico con exito")
                 _codigoPlan = 0
+                txt_semana.Clear()
             Else
                 BD.INS_MOD_BOR("INSERT planificacion (legajo, codTurno, semana, año) VALUES (" & _legajo_empleado & ", " & cmb_turno.SelectedValue & ", " & Integer.Parse(txt_semana.Text) & ", " & Integer.Parse(txt_año.Text) & ")")
                 MsgBox("Se agrego con exito")
@@ -90,9 +91,9 @@
     End Sub
 
     Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellClick
-        cmb_turno.SelectedValue = dgv.CurrentRow.Cells(5).Value
-        Me.txt_año.Text = dgv.CurrentRow.Cells(0).Value
-        Me.txt_semana.Text = dgv.CurrentRow.Cells(1).Value
-        _codigoPlan = dgv.CurrentRow.Cells(4).Value
+        cmb_turno.SelectedValue = dgv.CurrentRow.Cells(1).Value
+        Me.txt_año.Text = dgv.CurrentRow.Cells(5).Value
+        Me.txt_semana.Text = dgv.CurrentRow.Cells(4).Value
+        _codigoPlan = dgv.CurrentRow.Cells(0).Value
     End Sub
 End Class

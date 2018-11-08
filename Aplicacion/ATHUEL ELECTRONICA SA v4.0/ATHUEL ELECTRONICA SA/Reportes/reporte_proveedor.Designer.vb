@@ -23,13 +23,14 @@ Partial Class reporte_proveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.listado_proveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New ATHUEL_ELECTRONICA_SA.DataSet1()
         Me.btn_buscar = New System.Windows.Forms.Button()
         Me.rv1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.txt_info = New System.Windows.Forms.MaskedTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.listado_proveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -58,9 +59,9 @@ Partial Class reporte_proveedor
         Me.rv1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.listado_proveedorBindingSource
-        Me.rv1.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.listado_proveedorBindingSource
+        Me.rv1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.rv1.LocalReport.ReportEmbeddedResource = "ATHUEL_ELECTRONICA_SA.ReporteProveedores.rdlc"
         Me.rv1.Location = New System.Drawing.Point(10, 53)
         Me.rv1.Name = "rv1"
@@ -73,6 +74,7 @@ Partial Class reporte_proveedor
         Me.txt_info.Name = "txt_info"
         Me.txt_info.Size = New System.Drawing.Size(103, 20)
         Me.txt_info.TabIndex = 13
+        Me.ToolTip1.SetToolTip(Me.txt_info, "Forma de Busqueda: " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Por CUIT, rango de CUIT o por Razón Social.")
         '
         'Label1
         '
@@ -113,4 +115,5 @@ Partial Class reporte_proveedor
     Friend WithEvents Label1 As Label
     Friend WithEvents listado_proveedorBindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet1
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
